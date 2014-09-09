@@ -1,0 +1,98 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #f9ecd2;
+}
+.navbar {
+    position: fixed;
+    top: 0px;
+    /*background-color: #C5E3BF;*/
+    background-color: #003f80;
+    width: 100%;
+    height: 60px;
+    z-index: 90;
+}
+
+#logo {
+    position: absolute;
+    color: whitesmoke;
+    font-family: Lato;
+    font-size: 35;
+    top: 5%;
+    left: 5%;
+    height: 100%;
+}
+
+#resume {
+    font-size: 15;
+    font-family: Lato;
+    left: 65%;
+    top: 35%;
+    color: whitesmoke;
+    position: absolute;
+}
+#skills {
+    color: whitesmoke;
+    font-family: Lato;
+    font-size: 15px;
+    letter-spacing: 0px;
+    left: 74%;
+    top: 35%;
+    position: absolute;
+}
+
+#musings {
+    position: absolute;
+    font-size: 15px;
+    top: 35%;
+    left: 83%;
+    font-family: Lato;
+    color: whitesmoke;
+}
+
+#contact {
+    position: absolute;
+    left: 92%;
+    top: 35%;
+    font-family: Lato;
+    font-size: 15px;
+    color: whitesmoke;    
+}
+
+#body-container {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+#picture-container {
+    position: absolute;
+    
+}
+
+#picture {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+}
+
+#post-container {
+    /*border: 15px solid white;*/
+    position: absolute;
+    margin-left: 320;
+    padding: 10px 10px;
+    width: 500px;
+}
+
+#post-title {
+    font-family: Helvetica Neue;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+#post {
+    margin-top: 20px;
+    font-family: Helvetica Neue;
+    line-height: 25px;
+}
+
