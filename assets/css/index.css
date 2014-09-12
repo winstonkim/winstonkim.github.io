@@ -132,7 +132,6 @@ body {
 @media all and (min-width: 651px){
 #box1 {
 	position: relative;
-    z-index: 3;
     padding: 0px;
     background-color: #2da685;
     height: 100px;
@@ -214,6 +213,7 @@ body {
     left: 0; 
     bottom: 0; 
     right: 0;
+    z-index: 5;
 }
 }
 
@@ -223,10 +223,10 @@ body {
 	width: auto;
     margin: auto;
     position: absolute;
-    top: 0; 
-    left: 0; 
-    bottom: 0; 
-    right: 0;
+    left: 50%;
+    top: 8px;
+  	transform: translateX(-50%);
+    z-index: 5;
 }
 }
 
@@ -319,26 +319,103 @@ body {
 }
 }
 
-#container2 {
+/*#container2 {
 	position: absolute;
-	top: 55%;
+	top: 68%;
 	width: 452px;
 	height: 100px;
 	left:0;
     right:0;
     margin-left:auto;
     margin-right:auto;
-}
+    z-index: 5;
+}*/
 
 #text1 {
-	display: none;
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 96px;
+	text-align: center;
 	font-family: Montserrat;
 	position: relative;
-	z-index: 4;
+	font-size: 10px;
+	letter-spacing: 2px;
 	height: 100px;
     width: 110px;
+    float: left;
+    margin-right: 4px;
+}
+
+#text2 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 96px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 100px;
+    width: 110px;
+    float: left;
+    margin-right: 4px;
+}
+
+#text3 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 96px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 100px;
+    width: 110px;
+    float: left;
+    margin-right: 4px;
+}
+
+#text4 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 96px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 100px;
+    width: 110px;
+    float: left;
 }
 
 #box1:hover #text1{
-	display: block;
+	opacity: 1;
+}
+
+#box2:hover #text2{
+	opacity: 1;
+}
+
+#box3:hover #text3{
+	opacity: 1;
+}
+
+#box4:hover #text4{
+	opacity: 1;
+}
+
+#box1:active{
+    background: white;
+    -webkit-transition: none;
+	transition: none;
 }
