@@ -206,7 +206,7 @@ body {
 
 @media all and (max-width: 650px){
 #code {
-	height: 120px;
+	height: 110px;
 	width: auto;
     margin: auto;
     position: absolute;
@@ -219,7 +219,7 @@ body {
 
 @media all and (min-width: 651px){
 #code {
-	height: 90px;
+	height: 82px;
 	width: auto;
     margin: auto;
     position: absolute;
