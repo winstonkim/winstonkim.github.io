@@ -58,7 +58,7 @@ body {
 }
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 650px){
 #description {
 	text-align: center;
 	font-family: Montserrat;
@@ -72,7 +72,7 @@ body {
 }
 }
 
-@media all and (min-width: 601px){
+@media all and (min-width: 651px){
 #description {
 	text-align: center;
 	font-family: Montserrat;
@@ -86,6 +86,7 @@ body {
 }
 }
 
+@media all and (min-width: 651px){
 #container {
 	position: absolute;
 	top: 50%;
@@ -96,7 +97,38 @@ body {
     margin-left:auto;
     margin-right:auto;
 }
+}
 
+@media all and (max-width: 650px){
+#container {
+	position: absolute;
+	top: 50%;
+	width: 224px;
+	height: 200px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+}
+
+@media all and (max-width: 650px){
+#box1 {
+	position: relative;
+    z-index: 3;
+    padding: 0px;
+    background-color: #2da685;
+    height: 100px;
+    width: 110px;
+	float: left;
+	margin-right: 4px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	margin-bottom: 4px;
+}
+}
+
+@media all and (min-width: 651px){
 #box1 {
 	position: relative;
     z-index: 3;
@@ -109,29 +141,66 @@ body {
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+}
 
+@media all and (min-width: 651px){
 #box1:hover{
 	background-color: #ff658f;
 	color: #61d9b9;
 	height: 120px;
 }
+}
 
+@media all and (max-width: 650px){
+#box1:hover{
+	background-color: #ff658f;
+	color: #61d9b9;
+}
+}
+
+@media all and (min-width: 651px){
 #box2:hover{
 	background-color: #ffd718;
 	color: #61d9b9;
 	height: 120px;
 }
+}
 
+@media all and (max-width: 650px){
+#box2:hover{
+	background-color: #ffd718;
+	color: #61d9b9;
+}
+}
+
+@media all and (max-width: 650px){
+#box3:hover{
+	background-color: #0035b3;
+	color: #61d9b9;
+}
+}
+
+@media all and (min-width: 651px){
 #box3:hover{
 	background-color: #0035b3;
 	color: #61d9b9;
 	height: 120px;
 }
+}
 
+@media all and (min-width: 651px){
 #box4:hover{
 	background-color: #b421ff;
 	color: #61d9b9;
 	height: 120px;
+}
+}
+
+@media all and (max-width: 650px){
+#box4:hover{
+	background-color: #b421ff;
+	color: #61d9b9;
+}
 }
 
 #code {
@@ -145,6 +214,7 @@ body {
     right: 0;
 }
 
+@media all and (min-width: 651px){
 #box2 {
 	position: relative;
     z-index: 3;
@@ -154,8 +224,25 @@ body {
     width: 110px;
 	float: left;
 	margin-right: 4px;
+	margin-bottom: 4px;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+}
+
+@media all and (max-width: 650px){
+#box2 {
+	position: relative;
+    z-index: 3;
+    padding: 0px;
+    background-color: #2da685;
+    height: 100px;
+    width: 110px;
+	float: left;
+	margin-right: 0px;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
 }
 
 @media all and (min-width: 651px){
@@ -182,11 +269,13 @@ body {
     height: 100px;
     width: 110px;
 	margin-right: 4px;
+	float: left;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 }
 
+@media all and (max-width: 650px){
 #box4 {
 	position: relative;
     z-index: 3;
@@ -197,6 +286,21 @@ body {
 	float: left;
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+}
+}
+
+@media all and (min-width: 651px){
+#box4 {
+	position: relative;
+    z-index: 3;
+    padding: 0px;
+    background-color: #2da685;
+    height: 100px;
+    width: 110px;
+	float: left;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
 }
 
 #container2 {
