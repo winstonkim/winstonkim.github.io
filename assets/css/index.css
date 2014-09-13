@@ -148,6 +148,7 @@ body {
 	background-color: #ff658f;
 	color: #61d9b9;
 	height: 120px;
+	cursor: hand;
 }
 }
 
@@ -155,6 +156,7 @@ body {
 #box1:hover{
 	background-color: #ff658f;
 	color: #61d9b9;
+	cursor: hand;
 }
 }
 
@@ -163,6 +165,7 @@ body {
 	background-color: #ffd718;
 	color: #61d9b9;
 	height: 120px;
+	cursor: hand;
 }
 }
 
@@ -170,6 +173,7 @@ body {
 #box2:hover{
 	background-color: #ffd718;
 	color: #61d9b9;
+	cursor: hand;
 }
 }
 
@@ -177,6 +181,7 @@ body {
 #box3:hover{
 	background-color: #0035b3;
 	color: #61d9b9;
+	cursor: hand;
 }
 }
 
@@ -185,6 +190,7 @@ body {
 	background-color: #0035b3;
 	color: #61d9b9;
 	height: 120px;
+	cursor: hand;
 }
 }
 
@@ -193,6 +199,7 @@ body {
 	background-color: #b421ff;
 	color: #61d9b9;
 	height: 120px;
+	cursor: hand;
 }
 }
 
@@ -200,6 +207,7 @@ body {
 #box4:hover{
 	background-color: #b421ff;
 	color: #61d9b9;
+	cursor: hand;
 }
 }
 
@@ -342,7 +350,7 @@ body {
 	position: relative;
 	font-size: 10px;
 	letter-spacing: 2px;
-	height: 100px;
+	height: 10px;
     width: 110px;
     float: left;
     margin-right: 4px;
@@ -359,7 +367,7 @@ body {
 	position: relative;
 	font-size: 10px;
 	letter-spacing: 2px;
-	height: 100px;
+	height: 10px;
     width: 110px;
     float: left;
     margin-right: 4px;
@@ -376,7 +384,7 @@ body {
 	position: relative;
 	font-size: 10px;
 	letter-spacing: 2px;
-	height: 100px;
+	height: 10px;
     width: 110px;
     float: left;
     margin-right: 4px;
@@ -393,7 +401,7 @@ body {
 	position: relative;
 	font-size: 10px;
 	letter-spacing: 2px;
-	height: 100px;
+	height: 10px;
     width: 110px;
     float: left;
 }
@@ -415,7 +423,25 @@ body {
 }
 
 #box1:active{
-    background: white;
+    background: #ff99b5;
+    -webkit-transition: none;
+	transition: none;
+}
+
+#box2:active{
+    background: #ffe980;
+    -webkit-transition: none;
+	transition: none;
+}
+
+#box3:active{
+    background: #3a61bf;
+    -webkit-transition: none;
+	transition: none;
+}
+
+#box4:active{
+    background: #cf72ff;
     -webkit-transition: none;
 	transition: none;
 }
