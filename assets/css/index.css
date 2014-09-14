@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 #background {
@@ -339,6 +340,7 @@ body {
     z-index: 5;
 }*/
 
+@media all and (min-width: 651px){
 #text1 {
 	opacity: 0;
     transition: .4s;
@@ -355,7 +357,30 @@ body {
     float: left;
     margin-right: 4px;
 }
+}
 
+@media all and (max-width: 650px){
+	#text1 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: -16px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 10px;
+    width: 146px;
+    float: left;
+    margin-right: 4px;
+    background-color: #ff658f;
+    padding: 2px;
+	}
+}
+
+@media all and (min-width: 651px){
 #text2 {
 	opacity: 0;
     transition: .4s;
@@ -372,7 +397,30 @@ body {
     float: left;
     margin-right: 4px;
 }
+}
 
+@media all and (max-width: 650px){
+	#text2 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: -16px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 10px;
+    width: 146px;
+    float: left;
+    margin-right: 4px;
+    background-color: #ffd718;
+    padding: 2px;
+	}
+}
+
+@media all and (min-width: 651px){
 #text3 {
 	opacity: 0;
     transition: .4s;
@@ -389,7 +437,30 @@ body {
     float: left;
     margin-right: 4px;
 }
+}
 
+@media all and (max-width: 650px){
+	#text3 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 142px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 10px;
+    width: 146px;
+    float: left;
+    margin-right: 4px;
+    background-color: #0035b3;
+    padding: 2px;
+	}
+}
+
+@media all and (min-width: 651px){
 #text4 {
 	opacity: 0;
     transition: .4s;
@@ -404,6 +475,28 @@ body {
 	height: 10px;
     width: 110px;
     float: left;
+}
+}
+
+@media all and (max-width: 650px){
+	#text4 {
+	opacity: 0;
+    transition: .4s;
+	color: white;
+	font-weight: 50;
+	margin-top: 142px;
+	text-align: center;
+	font-family: Montserrat;
+	position: relative;
+	font-size: 10px;
+	letter-spacing: 2px;
+	height: 10px;
+    width: 146px;
+    float: left;
+    margin-right: 4px;
+    background-color: #b421ff;
+    padding: 2px;
+	}
 }
 
 #box1:hover #text1{
@@ -444,4 +537,13 @@ body {
     background: #cf72ff;
     -webkit-transition: none;
 	transition: none;
+}
+
+#projects{
+	top: 100%;
+	background-color: yellow;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
 }
