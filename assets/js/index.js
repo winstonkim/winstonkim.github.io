@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-$("#box1").click(function () {
-    $('#section_projects').transition({top: '0%' });
+$('#background, #projects').on('click', function(e){
+    e.preventDefault();
+    var target= $(this).get(0).id == 'up' ? $('#projects') : $('#background');
+    $('html, body').stop().animate({
+       scrollTop: target.offset().top
+    }, 1000);
 });
 }

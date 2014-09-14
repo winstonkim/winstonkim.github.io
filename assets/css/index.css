@@ -4,6 +4,40 @@ body {
 	overflow: hidden;
 }
 
+@media all and (min-width: 651px){
+a.fill-div {
+	position: absolute;
+    display: block;
+    height: 100px;
+    width: 110px;
+    text-decoration: none;
+    color: white;
+    z-index: 10;
+    -webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+}
+
+@media all and (max-width: 650px){
+a.fill-div {
+	position: absolute;
+    display: block;
+    height: 140px;
+    width: 150px;
+    text-decoration: none;
+    color: white;
+    z-index: 10;
+    -webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+}
+
+@media all and (min-width: 651px){
+a.fill-div:hover {
+	height:120px;
+}
+}
+
 #background {
 	background-color: #61d9b9;
 	width: 100%;
