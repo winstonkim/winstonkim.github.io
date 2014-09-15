@@ -1,7 +1,7 @@
 body {
 	margin: 0;
-	padding: 0;
-	overflow: hidden;
+	padding: 0;/*
+	overflow: hidden;*/
 }
 
 @media all and (min-width: 651px){
@@ -67,9 +67,6 @@ a.fill-div:hover {
 	color: white;
 	z-index: 1;
 	position: relative;
-	/*left: 0;
-	right: 0;
-	top: 30%;*/
   	top: 50%;
   	transform: translateY(-50%);
   	margin-top: -180px;
@@ -84,9 +81,6 @@ a.fill-div:hover {
 	color: white;
 	z-index: 1;
 	position: relative;
-	/*left: 0;
-	right: 0;
-	top: 30%;*/
   	top: 50%;
   	transform: translateY(-50%);
   	margin-top: -80px;
@@ -131,6 +125,7 @@ a.fill-div:hover {
     right:0;
     margin-left:auto;
     margin-right:auto;
+    z-index: 11;
 }
 }
 
@@ -576,6 +571,24 @@ a.fill-div:hover {
 #projects{
 	top: 100%;
 	background-color: yellow;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+#photos{
+	top: 200%;
+	background-color: red;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+#designs{
+	top: 300%;
+	background-color: green;
 	position: absolute;
 	width: 100%;
 	height: 100%;
