@@ -23,5 +23,4 @@ $('#background, #projects').on('click', function(e){
        scrollTop: target.offset().top
     }, 1000);
 });
-
 });
