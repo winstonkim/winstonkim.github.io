@@ -11,9 +11,27 @@ $(document).scroll(function(){
     if($(this).scrollTop() <= navi_start){   
         $('#container').css({"position":"absolute", "top":"50%"});
     }
-    if($(this).scrollTop() >= proj){   
-        $("#code").attr('src', 'assets/images/home.png');
-    }
+});
+
+$("#box1").click(function() {
+  $("#code").fadeTo(1000,0.30, function() {
+      $("#code").attr('src','assets/images/home.png');
+  }).fadeTo(1000,1);
+  return false;
+});
+
+$("#box2").click(function() {
+  $("#camera").fadeTo(1000,0.30, function() {
+      $("#camera").attr('src','assets/images/home.png');
+  }).fadeTo(500,1);
+  return false;
+});
+
+$("#box3").click(function() {
+  $("#design").fadeTo(1000,0.30, function() {
+      $("#design").attr('src','assets/images/home.png');
+  }).fadeTo(500,1);
+  return false;
 });
 
 $('#background, #projects').on('click', function(e){
