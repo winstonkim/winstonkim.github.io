@@ -1,13 +1,18 @@
 $(document).ready(function() {
 
-var t = $("#container").offset().top;
+var navi_start = $("#container").offset().top -8;
+var proj = $("#projects").offset().top;
+var photo = $("#photos").offset().top;
 
 $(document).scroll(function(){
-    if($(this).scrollTop() > t){   
-        $('#container').css({"position":"fixed", "top":"0%"});
+    if($(this).scrollTop() > navi_start){   
+        $('#container').css({"position":"fixed", "top":"4px"});
     }
-    if($(this).scrollTop() <= t){   
+    if($(this).scrollTop() <= navi_start){   
         $('#container').css({"position":"absolute", "top":"50%"});
+    }
+    if($(this).scrollTop() >= proj){   
+        $("#code").attr('src', 'assets/images/home.png');
     }
 });
 

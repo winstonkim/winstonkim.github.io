@@ -268,6 +268,87 @@ a.fill-div:hover {
 }
 }
 
+@media all and (max-width: 650px){
+#camera {
+	height: 110px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 5;
+}
+}
+
+@media all and (min-width: 651px){
+#camera {
+	height: 82px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+  	transform: translateX(-50%);
+    z-index: 5;
+}
+}
+
+@media all and (max-width: 650px){
+#design {
+	height: 110px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 5;
+}
+}
+
+@media all and (min-width: 651px){
+#design {
+	height: 82px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+  	transform: translateX(-50%);
+    z-index: 5;
+}
+}
+
+@media all and (max-width: 650px){
+#person {
+	height: 110px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 5;
+}
+}
+
+@media all and (min-width: 651px){
+#person {
+	height: 82px;
+	width: auto;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 8px;
+  	transform: translateX(-50%);
+    z-index: 5;
+}
+}
+
 @media all and (min-width: 651px){
 #box2 {
 	position: relative;
@@ -579,7 +660,7 @@ a.fill-div:hover {
 
 #photos{
 	top: 200%;
-	background-color: red;
+	background-color: white;
 	position: absolute;
 	width: 100%;
 	height: 100%;
