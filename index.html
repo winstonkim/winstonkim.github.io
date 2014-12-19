@@ -1,78 +1,61 @@
 <html>
 <head>
-	<title>WINSTON KIM</title>
-	<link href='http://fonts.googleapis.com/css?family=Orator Std:200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Brawler:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=PT Sans:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Droid Sans:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open Sans:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
+	<title>Winston Kim</title>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- CSS Stylesheets -->
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="assets/css/landing.css">
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/waypoints/waypoints.min.js"></script>
-	<script src="assets/js/waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
-	<script type="text/javascript" src="assets/js/index.js"></script>
-	<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:100, 200, 400,300,700,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body onload = "$(this).click();">
+	<div class="menu-position" id="menu">
+		<button class="menu-icon" onclick="$(this).toggleNavigation();">
+			<i id = "menu_icon" class ="fa fa-bars fa-lg animated fadeIn"></i>
+		</button>
+	</div>
+	<div class="sidebar" id="sidebar">
+		<ul class="menu">
+			<li>
+				<span class="link-icon"><i class="fa fa-home"></i></span>
+				<a href="#link1" onclick="$(this).toggleNavigation();">Home</a>
+			</li>
+			<li>
+				<span class="link-icon"><i class="fa fa-user" style="margin-left:1px;"></i></span>
+				<a href="#link2" onclick="$(this).toggleNavigation();" style="margin-left: 16px;">About Me</a>
+			</li>
+			<li>
+				<span class="link-icon"><i class="fa fa-image" style="margin-left:-1px;"></i></span>
+				<a href="#" onclick="$(this).toggleNavigation();" style="margin-left: 13.5px">Portfolio</a>
+			</li>	
+			<li>
+				<span class="link-icon"><i class="fa fa-envelope"></i></span>
+				<a href="#" onclick="$(this).toggleNavigation();" style="margin-left:13px;">Contact Me</a>
+			</li>	
+		</ul>
+	</div>
+	<div class="fade" id="fade"></div>
+	<div class="container" id="container">
+
 	<div id = "background"></div>
-	<div id = "container0">
-		<div id = "banner">
-			WINSTON
+	<div id = "title_container">
+		<div id = "name" class = "animated fadeInDown">
+			Winston Kim
 		</div>
-		<div id = "description">
-			DEVELOPER + PHOTOGRAPHER + DESIGNER
-		</div>
-	</div>
-	<div id = "container">
-		<div id = "box1">
-			<img id = "code" src = "assets/images/code.png">
-			<a id = "project_link" href = "#projects" class = "smoothScroll fill-div">
-				<div id = "text1">
-					PROJECTS
-				</div>
-			</a>
-		</div>
-		<div id = "box2">
-			<img id = "camera" src = "assets/images/camera.png">
-			<a id = "photo_link" href = "#photos" class = "smoothScroll fill-div">
-				<div id = "text2">
-					PHOTOS
-				</div>
-			</a>
-		</div>
-		<div id = "box3">
-			<img id = "design" src = "assets/images/design.png">
-			<a id = "design_link" href = "#designs" class = "smoothScroll fill-div">
-				<div id = "text3">
-					DESIGNS
-				</div>
-			</a>
-		</div>
-		<div id = "box4">
-			<img id = "person" src = "assets/images/person.png">
-			<a href = "resume.pdf" class = "fill-div">
-				<div id = "text4">
-					RESUME
-				</div>
-			</a>
+		<div id = "description" class = "animated fadeInDown delay-25s">
+			A digital designer in a developer's body
 		</div>
 	</div>
-
-	<div id = "projects"><a href = "#background" class = "smoothScroll">COMING SOON</a></div>
-
-	<div id = "photos"><a href = "#background" class = "smoothScroll">COMING SOON</a></div>
-
-	<div id = "designs"><a href = "#background" class = "smoothScroll">COMING SOON</a></div>
-
+	</div>
 
 </body>
+
+<!-- JavaScript  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
 </html>
