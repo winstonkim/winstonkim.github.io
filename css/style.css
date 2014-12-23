@@ -21,7 +21,7 @@ body{
 }
 
 .menu-position{
-	right: 20px;
+	right: 17px;
 	top: 20px;
 	z-index: 1000;
 	position: fixed;
@@ -70,15 +70,20 @@ body{
 	transform: translate3d(300px, 0, 0);
 }
 
-.link-icon {
-	color: #999;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+.block-link{
+	display: block;
+	padding: 17px 30px;
 }
 
-.menu li:hover .link-icon{
-	color: #FFF;
+.icon-styling{
+	color: #999;
+	font-size: 1.2em !important;
+	transition: all 0.3s;
+	margin-right: 15px;
+}
+
+.menu li:hover .icon-styling{
+	color: white;
 }
 
 .menu {
@@ -88,7 +93,7 @@ body{
 }
 
 .menu li {
-	padding: 15px 30px 15px 30px;
+	/*padding: 15px 30px 15px 30px;*/
 	background: inherit;
 	/*border-top: 1px solid #d5d3c8;*/
 	border-top: 1px solid #ccc;
@@ -110,7 +115,7 @@ body{
 }
 
 .menu a {
-	margin-left: 15px;
+	/*margin-left: 15px;*/
 	font-size: 0.8em;
 	letter-spacing: 3px;
 	text-transform: uppercase;
