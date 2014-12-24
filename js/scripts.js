@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 		for (var i = 0; i < panels.length; i++) {
 			var offsetTop = $(panels[i]).offset().top;
-    var halfPanel = (($(panels[i]).height() + 80) / 3.5) // half the panel height + padding
+    var halfPanel = (($(panels[i]).height() + 80) / 3) // half the panel height + padding
     var offsetHalf = halfPanel + offsetTop;
 
     $(panels[i]).attr('data-scroll-top' , offsetTop);
