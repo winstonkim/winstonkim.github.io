@@ -24,6 +24,46 @@ $(document).ready(function(){
 			$(this).toggleNavigation();
 		}
 	}
+
+	$(window).on('scroll', function(){
+		var curPos = $(window).scrollTop();
+		// $('body').css('background-position', '0 -' + curPos * .1 + 'px');
+		fadePanels(curPos);
+	}).scroll();
+
+	function fadePanels(curPos) {
+		var panels = $('.panel');
+
+		for (var i = 0; i < panels.length; i++) {
+			var offsetTop = $(panels[i]).offset().top;
+    var halfPanel = (($(panels[i]).height() + 80) / 3.5) // half the panel height + padding
+    var offsetHalf = halfPanel + offsetTop;
+
+    $(panels[i]).attr('data-scroll-top' , offsetTop);
+    $(panels[i]).attr('data-scroll-half', offsetHalf);
+    
+    var j = (curPos - offsetHalf) / halfPanel;
+
+    if (curPos > $(panels[i]).data('scroll-half')) {
+    	$(panels[i]).css('opacity', 1 - (j));
+    } else {
+    	$(panels[i]).css('opacity', '1');
+    }
+}
+}
+// waypoints
+var waypoint1 = $('#section-2').waypoint(function(down) {
+	$('#about_title').addClass("animated fadeInDown");
+	$('#about_description').addClass("animated fadeInUp");
+}, {
+  offset: '30%'
+})
+
+var waypoint2 = $('#section-2').waypoint(function(down) {
+	$('#me').addClass("animated bounceIn");
+}, {
+})
+
 });
 
 // function toggleNavigation() {
