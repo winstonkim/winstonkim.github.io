@@ -56,15 +56,21 @@ var waypoint1 = $('#section-2').waypoint(function(down) {
 	$('#about_title').addClass("animated fadeInDown");
 	$('#about_description').addClass("animated fadeInUp");
 }, {
-  offset: '30%'
+	offset: '30%'
 })
 
 var waypoint2 = $('#section-2').waypoint(function(down) {
 	$('#me').addClass("animated bounceIn");
-}, {
+	setTimeout(function(){
+		$('#graphics').css('width','458px');
+		setTimeout(function(){
+			$('#bubble').addClass('animated fadeIn')
+			$('.bubble').css('display','inline');
+		}, 600);
+		
+	},1000);
 })
-
-});
+})
 
 // function toggleNavigation() {
 // 	var sidebar = document.getElementById('sidebar');
