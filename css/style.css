@@ -248,7 +248,7 @@ body{
 	font-weight: 300;
 	font-size: 12px;
 	/*letter-spacing: 2.85px;*/
-	letter-spacing: 2.85px;
+	letter-spacing: 3.5px;
 	margin-top: -10px;
 	transition: all .5s;
 }
@@ -290,7 +290,8 @@ body{
 .bubble{
 	/*position: relative;*/
 	width: 175px;
-	height: 255px;
+	/*height: 255px;*/
+	height: 220px;
 	padding: 15px;
 	background: #FFFFFF;
 	-webkit-border-radius: 20px;
@@ -316,4 +317,15 @@ body{
 	margin-top: -13px;
 	left: -22px;
 	top: 31%;
+}
+
+.icons{
+	color: #ccc;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+}
+
+.icons:hover{
+	color: black;
 }
