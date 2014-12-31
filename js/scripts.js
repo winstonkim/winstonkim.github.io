@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#background").fadeIn(800);
+	// $("#background").fadeIn(800);
 
 	$.fn.toggleNavigation= function() {
 		$("#container").toggleClass('container-pushed');
