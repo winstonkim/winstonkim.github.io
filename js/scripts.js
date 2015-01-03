@@ -1,4 +1,9 @@
 $(document).ready(function(){
+	$('#down_icon').click(function(){
+		$(document.body).animate({
+			'scrollTop':   $('#section-2').offset().top
+		}, 1500)
+	});
 	// $("#background").fadeIn(800);
 
 	$.fn.toggleNavigation= function() {
