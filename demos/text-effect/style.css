@@ -1,0 +1,224 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.box{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+#box1{
+	background-color: #222;
+}
+
+#box2{
+	background-color: #c8d58c;
+}
+
+.link{
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 9em;
+	line-height: 1;
+	color: #999;
+	display: inline-block;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Takiri */
+.link--takiri {
+	font-family: Wire One;
+	font-size: 10em;
+	padding: 0 10px 20px;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+	text-transform: uppercase;
+}
+
+.link--takiri:hover {
+	color: #FFF;
+}
+
+.link--takiri::before {
+	content: '';
+	position: absolute;
+	height: 36px;
+	width: 100%;
+	top: 50%;
+	margin-top: -18px;
+	z-index: -1;
+	background: #000;
+	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(0,1,1);
+	transform: rotate3d(0,0,1,45deg) scale3d(0,1,1);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.link--takiri:hover::before {
+	-webkit-transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+	transform: rotate3d(0,0,1,45deg) scale3d(1,1,1);
+}
+
+.link--takiri span {
+	font-size: 20%;
+	font-weight: 400;
+	position: absolute;
+	right: 15px;
+	color: #abc437;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translate3d(-10px,-10px,0);
+	transform: translate3d(-10px,-10px,0);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.link--takiri:hover span {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* Yaku */
+.link--yaku {
+	color: #a2ac73;
+	font-family: Lato;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 9em;
+	overflow: hidden;
+	padding: 0 0 15px;
+}
+
+.link--yaku::before {
+	content: '';
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	border-width: 2px 0;
+	border-color: #fff;
+	border-style: solid;
+	left: 0;
+	-webkit-transform: translate3d(-101%,0,0);
+	transform: translate3d(-101%,0,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.link--yaku:hover::before {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.link--yaku span {
+	display: inline-block;
+	position: relative;
+	-webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+	transform: perspective(1000px) rotate3d(0,1,0,0deg);
+	-webkit-transition: -webkit-transform 0.5s, color 0.5s;
+	transition: transform 0.5s, color 0.5s;
+}
+
+.link--yaku:hover span {
+	color: #fff;
+	-webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+	transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
+
+.link--yaku span:nth-child(7),
+.link--yaku:hover span:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.link--yaku span:nth-child(6),
+.link--yaku:hover span:nth-child(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.link--yaku span:nth-child(5),
+.link--yaku:hover span:nth-child(3) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.link--yaku span:nth-child(4),
+.link--yaku:hover span:nth-child(4) {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.link--yaku span:nth-child(3),
+.link--yaku:hover span:nth-child(5) {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.link--yaku span:nth-child(2),
+.link--yaku:hover span:nth-child(6) {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.link--yaku span:first-child,
+.link--yaku:hover span:nth-child(7) {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+/* Ilin */
+.link--ilin {
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1;
+	overflow: hidden;
+	color: #333;
+	font-family: Roboto Slab;
+}
+
+.link--ilin span {	
+	position: relative;
+	display: inline-block;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+.link--ilin:hover span:first-of-type {
+	color: #5cccda;
+}
+
+.link--ilin:hover span:last-of-type {
+	color: #fff;
+}
+
+.link--ilin span::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #5cccda;
+	line-height: 0.8;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.link--ilin span:last-of-type::before {
+	background: #fff;
+}
+
+.link--ilin:hover span:last-of-type::before,
+.link--ilin span:first-of-type::before {
+	-webkit-transform: translate3d(0,-150%,0);
+	transform: translate3d(0,-150%,0);
+}
+
+.link--ilin:hover span:first-of-type::before,
+.link--ilin span:last-of-type::before {
+	-webkit-transform: translate3d(0,150%,0);
+	transform: translate3d(0,150%,0);
+}
