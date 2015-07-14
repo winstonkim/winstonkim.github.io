@@ -1,0 +1,550 @@
+*{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+a{
+	text-decoration: none;
+}
+
+.section{
+	width: 50%;
+}
+
+@media (max-width: 832px) {
+	.section{
+		width: 100%;
+	}
+}
+
+.links a{
+	font-family: Lato;
+	font-weight: 300;
+	color: white;
+	text-transform: uppercase;
+	font-size: 10px;
+	text-decoration: none;
+	display: block;
+	background: rgba(255,255,255,.15);
+	margin: 2px;
+	padding: 4px;
+	transition: all .25s;
+	letter-spacing: 1px;
+}
+
+.links a:hover{
+	background: rgba(255,255,255,.4);
+}
+
+.links-mobile a{
+	font-family: Lato;
+	font-weight: 300;
+	color: white;
+	text-transform: uppercase;
+	font-size: 10px;
+	text-decoration: none;
+	display: block;
+	background: rgba(255,255,255,.15);
+	margin: 2px;
+	padding: 4px;
+	transition: all .25s;
+	letter-spacing: 1px;
+}
+
+.links-mobile a:hover{
+	background: rgba(255,255,255,.4);
+}
+
+.links-mobile{
+	display: none;
+}
+
+.active{
+	background: rgba(255,255,255,.4) !important;
+}
+
+.links{
+	margin: 20px 0px;
+}
+
+.links-mobile{
+	margin: 20px 0px;
+}
+
+.name{
+	height: 150px;
+	width: 150px;
+	margin: auto;
+	border: 1px solid #fff;
+	display: table;
+	margin-bottom: 25px;
+}
+
+h1{
+	font-family: 'Lato', sans-serif;
+	font-size: 50px;
+	font-weight: 100;
+	text-transform: uppercase;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h2{
+	font-family: 'Lato', sans-serif;
+	font-size: 14.5px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 3.5px;
+	margin-top: -3px;
+}
+
+h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+}
+
+h4{
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+h5{
+	font-family: 'Lato', sans-serif;
+	font-size: 35px;
+	font-weight: 500;
+	/*text-transform: uppercase;*/
+	margin-bottom: 5px;
+}
+
+h6{
+	font-family: 'Lato', sans-serif;
+	font-size: 12.5px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 3.5px;
+	margin-top: -3px;
+}
+
+p{
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	font-weight: 300;
+	padding: 10px 50px 10px 50px;
+}
+
+span{
+	display: inline-block;
+	/*border: solid 1px black;*/
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 5px 9px;
+	margin: 3px;
+	font-weight: 300;
+	color: white;
+	background-color: #2396d8;
+	opacity: 1;
+}
+
+.skills{
+	margin: 15px 10px 5px 10px;
+	padding: 0px 50px;
+}
+
+.paragraph{
+	margin: 10px 0px;
+}
+
+.normal{
+	color: #bbb;
+}
+
+.button{
+	background: none;
+	border: 1px solid;
+	border-color: #bbb;
+	padding: 6px 13px;
+	color: #777;
+	display: inline-block;
+	transition: all .3s;
+}
+
+.button:hover{
+	border: 1px solid;
+	color: white;
+}
+
+.calcentral-button:hover{
+	background: #2396d8;
+	border-color: #2396d8;
+}
+
+.rescomp-button:hover{
+	background: #BFD379;
+	border-color: #BFD379;
+}
+
+.koinrides-button:hover{
+	background: #959fc3;
+	border-color: #959fc3;
+}
+
+.ets-button:hover{
+	background: #539fd7;
+	border-color: #539fd7;
+}
+
+.left{
+	height: 100%;
+	background-color: #2A6775;
+	color: white;
+	position: fixed;
+	background: url("../images/background.jpg");
+	background-size: cover;
+}
+
+.left-ex{
+	height: 100%;
+	position: fixed;
+	transition: all .8s;
+}
+
+.right{
+	height: 200%;
+	position: absolute;
+	left: 50%;
+	background-color: #fff;
+	transition: all .8s;
+}
+
+.right-ex{
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	background-color: #fff;
+}
+
+
+.logo{
+	height: 200px;
+	width: 200px;
+	margin: 3px;
+	transition: all .25s ease-in;
+}
+
+@media (max-width: 1032px) {
+	.logo{
+		height: 150px;
+		width: 150px;
+		margin: 3px;
+		transition: all .25s ease-in;
+	}
+}
+
+.logo:hover{
+	cursor: pointer;
+}
+
+.content-right-ex{
+	height: 100%;
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+
+.content-right{
+	height: 50%;
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+
+.table-contain{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content-left{
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -20%);
+	transform: translate(-50%, -20%);
+}
+
+.content-left-ex{
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -20%);
+	transform: translate(-50%, -20%);
+}
+
+.description{
+	width: 100%;
+	transition: all .25s ease-in;
+	position: absolute;
+}
+
+.invisible{
+	opacity: 0;
+}
+
+.gone{
+	display: none;
+}
+
+.pushed-left{
+	left: -2000px;
+}
+
+.push-right{
+	left: 0px;
+}
+
+.logo-container{
+	padding: 15px 50px;
+}
+
+.fade{
+	opacity: .6;
+}
+
+.flickr{
+	float: left;
+	margin: 5px;
+}
+
+#flickr-contain{
+	padding: 10px;
+}
+
+.icon{
+	height: 70px;
+	width: 70px;
+	float: left;
+	margin: 1px;
+	transition: all .25s ease-in;
+}
+
+.icon-contain{
+	margin: 10px;
+	display: inline-block;
+}
+
+#calcentral-left{
+	background: url('../images/monitors/calcentral.png') #2396d8;
+	background-size: 25%;
+	background-position: 16.5% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#rescomp-left{
+	background: url('../images/monitors/rescomp.png') #BFD379;
+	background-size: 25%;
+	background-position: 16.5% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#koinrides-left{
+	background: url('../images/monitors/koinrides.png') #959fc3;
+	background-size: 25%;
+	background-position: 16.5% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#ets-left{
+	background: url('../images/monitors/ets.png') #539fd7;
+	background-size: 25%;
+	background-position: 16.5% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.monitor{
+	width: 300px;
+}
+
+#x{
+	position: absolute;
+	right: 7;
+	top: 4;
+	font-size: 30px;
+	-webkit-transform:  scale(1,.8);
+	transform:  scale(1,.8);
+}
+
+#x:hover{
+	cursor: pointer;
+}
+
+.content-right-ex a{
+	text-decoration: none;
+}
+
+#prev-next{
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+	margin: 5px;
+	position: absolute;
+	bottom: 40;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.inactive{
+	color: #ddd;
+}
+
+.mobile-description{
+	display: none;
+}
+
+@media (max-width: 832px) {
+	#experience{
+		display: none;
+	}
+
+	.right{
+		left: 0;
+		height: auto;
+		background-color: #eee;
+		padding: 30px 0px 30px 0px;
+	}
+
+	.right-ex{
+		display: none;
+	}
+	
+	*{
+		overflow: auto;
+	}
+
+	#calcentral-left{
+		background-size: 35%;
+		background-position: 50% 50%;
+		background-attachment: initial;
+	}
+
+	#rescomp-left{
+		background-size: 35%;
+		background-position: 50% 50%;
+		background-attachment: initial;
+	}
+
+	#koinrides-left{
+		background-size: 35%;
+		background-position: 50% 50%;
+		background-attachment: initial;
+	}
+
+	#ets-left{
+		background-size: 35%;
+		background-position: 50% 50%;
+		background-attachment: initial;
+	}
+
+	.pushed-left{
+		left: 0px;
+		position: relative !important;
+	}
+
+	.left-ex{
+		height: 50%;
+		position: fixed;
+		transition: all .8s;
+	}
+
+	.invisible{
+		opacity: 100;
+	}
+
+	.mobile-description{
+		text-align: center;
+		position: relative;
+		background-color: white;
+		display: block;
+		padding: 30px 0px;
+	}
+
+	p{
+		padding: 10px 30px 10px 30px;
+		font-size: 11px;
+	}
+
+	h5{
+		font-size: 30px;
+	}
+
+	.content-left{
+		height: 100%;
+		text-align: center;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -20%);
+		transform: translate(-50%, -20%);
+	}
+
+	.left{
+		position: relative;
+	}
+
+	.links{
+		display: none;
+	}
+
+	.links-mobile{
+		display: block;
+	}
+
+	#descriptions{
+		display: none;
+	}
+
+	.icon{
+		height: 50px;
+		width: 50px;
+	}
+}
+
+@media (max-width: 560px) {
+	#calcentral-left{
+		background-size: 45%;
+	}
+
+	#rescomp-left{
+		background-size: 45%;
+	}
+
+	#koinrides-left{
+		background-size: 45%;
+	}
+
+	#ets-left{
+		background-size: 45%;
+	}
+}
