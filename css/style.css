@@ -496,17 +496,17 @@ span{
 	}
 
 	h5{
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.content-left{
-		height: 100%;
+		height: initial;
 		text-align: center;
-		position: fixed;
+		position: absolute;
 		top: 50%;
 		left: 50%;
-		-webkit-transform: translate(-50%, -20%);
-		transform: translate(-50%, -20%);
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 
 	.left{
@@ -528,6 +528,10 @@ span{
 	.icon{
 		height: 50px;
 		width: 50px;
+	}
+
+	h2{
+		font-weight: 300;
 	}
 }
 
