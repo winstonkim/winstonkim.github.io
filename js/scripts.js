@@ -11,6 +11,9 @@ $(document).ready(function() {
 			else if (e.keyCode == 37) {
 				previousPage();
 			}
+			else if (e.keyCode == 27) {
+				closePage();
+			}
 		}
 	});
 
@@ -101,6 +104,17 @@ $(document).ready(function() {
 		resetNextPrev();
 	}
 
+	function closePage(){
+		onExperience = false;
+		$('#calcentral-page').addClass('gone');
+		$('#rescomp-page').addClass('gone');
+		$('#koinrides-page').addClass('gone');
+		$('#ets-page').addClass('gone');
+		$('.left-ex').removeClass('push-right');
+		$('.right').removeClass('gone');
+		$('.left-ex').removeClass('gone');
+	}
+
 	$('.logo').click(
 		function(){
 			onExperience = true;
@@ -119,18 +133,7 @@ $(document).ready(function() {
 		}
 	);
 
-	$('#x').click(
-		function(){
-			onExperience = false;
-			$('#calcentral-page').addClass('gone');
-			$('#rescomp-page').addClass('gone');
-			$('#koinrides-page').addClass('gone');
-			$('#ets-page').addClass('gone');
-			$('.left-ex').removeClass('push-right');
-			$('.right').removeClass('gone');
-			$('.left-ex').removeClass('gone');
-		}
-	);
+	$('#x').click(closePage);
 
 	$('#next').click(nextPage);
 	$('#previous').click(previousPage);
