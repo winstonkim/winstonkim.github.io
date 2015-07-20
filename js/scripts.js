@@ -1,13 +1,16 @@
 $(document).ready(function() {
 	var experience = ['calcentral', 'rescomp', 'koinrides', 'ets'];
 	var currentNum;
+	var onExperience = false;
 
 	$('body').keydown(function(e) {
-		if (e.keyCode == 39) {
-			nextPage();
-		}
-		else if (e.keyCode == 37) {
-			previousPage();
+		if (onExperience){
+			if (e.keyCode == 39) {
+				nextPage();
+			}
+			else if (e.keyCode == 37) {
+				previousPage();
+			}
 		}
 	});
 
@@ -100,6 +103,7 @@ $(document).ready(function() {
 
 	$('.logo').click(
 		function(){
+			onExperience = true;
 			var currentID = $(this).attr('id');
 			currentNum = experience.indexOf(currentID);
 			for (var i = 0; i < currentNum; i++){
@@ -117,6 +121,7 @@ $(document).ready(function() {
 
 	$('#x').click(
 		function(){
+			onExperience = false;
 			$('#calcentral-page').addClass('gone');
 			$('#rescomp-page').addClass('gone');
 			$('#koinrides-page').addClass('gone');
