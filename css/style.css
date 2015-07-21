@@ -387,10 +387,20 @@ span{
 	font-size: 30px;
 	-webkit-transform:  scale(1,.8);
 	transform:  scale(1,.8);
+	background-color: #ccc;
+	color: white;
+	width: 16.5px;
+	padding: 0px 5.5px;
+	height: 38px;
+	margin: 1px 5px;
+	-webkit-transition: all .3s;
+	transition: all .3s;
 }
 
 #x:hover{
 	cursor: pointer;
+	background-color: #eee;
+	color: black;
 }
 
 .content-right-ex a{
