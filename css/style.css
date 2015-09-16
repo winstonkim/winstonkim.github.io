@@ -562,3 +562,19 @@ span{
 		background-size: 45%;
 	}
 }
+
+.screenshot-contain {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	margin: 15px;
+	justify-content: center;
+}
+
+.screenshots {
+	height: 75px;
+	margin: 5px;
+	border: solid 1px #ddd;
+}
