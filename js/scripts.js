@@ -1,22 +1,30 @@
 $(document).ready(function() {
+	// array holding experience displayed on webpage
 	var experience = ['calcentral', 'rescomp', 'koinrides', 'ets'];
+	// current experience page number
 	var currentNum;
+	// boolean if on experience display pages
 	var onExperience = false;
 
+	// activate keydown functionality on experience display pages
 	$('body').keydown(function(e) {
-		if (onExperience){
+		if (onExperience) {
+			// right arrow
 			if (e.keyCode == 39) {
 				nextPage();
 			}
+			// left arrow
 			else if (e.keyCode == 37) {
 				previousPage();
 			}
+			// esc button
 			else if (e.keyCode == 27) {
 				closePage();
 			}
 		}
 	});
 
+	// find better way to highlight navbar buttons rather than clicks
 	$('.links a').click(function(event){
 		if ($(this).attr('id') === 'resume'){
 			return;
@@ -25,129 +33,127 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 
+	var currentID, className;
+
+	// fades other images and adds description on hover
+	var imageOnHover = function() {
+		currentID = $(that).attr('id');
+		className = $(that).attr('class');
+		$('.' + className).addClass('fade');
+		$('#' + currentID).removeClass('fade');
+		$('#' + currentID + '-desc').removeClass('invisible');
+	}
+
+	// removes fade and description off hover
+	var imageOffHover = function() {
+		currentID = $(that).attr('id');
+		className = $(that).attr('class');
+		$('.' + className).removeClass('fade');
+		$('#' + currentID + '-desc').addClass('invisible');
+	}
+
+	// activate hover effect on logos
 	$('.logo').hover(
-		function(){
-			var currentID = $(this).attr('id');
-			$('.logo').addClass('fade');
-			$('#'+currentID).removeClass('fade');
-			revealID = currentID + '-desc';
-			$('#'+revealID).removeClass('invisible');
+		function() {
+			that = this;
+			imageOnHover();
 		},
 		function(){
-			$('.logo').removeClass('fade');
-			var currentID = $(this).attr('id');
-			revealID = currentID + '-desc';
-			$('#'+revealID).addClass('invisible');
+			imageOffHover();
 		}
 	);
 
+	// activate hover effects on icons
 	$('.icon').hover(
-		function(){
-			var currentID = $(this).attr('id');
-			$('.icon').addClass('fade');
-			$('#'+currentID).removeClass('fade');
-			revealID = currentID + '-desc';
-			$('#'+revealID).removeClass('invisible');
+		function() {
+			that = this;
+			imageOnHover();
 		},
 		function(){
-			$('.icon').removeClass('fade');
-			var currentID = $(this).attr('id');
-			revealID = currentID + '-desc';
-			$('#'+revealID).addClass('invisible');
+			imageOffHover();
 		}
 	);
 
-	function resetNextPrev(){
-		$('#previous').removeClass('inactive');
-		$('#next').removeClass('inactive');
-		$('#previous').addClass('pointer');
-		$('#next').addClass('pointer');
+	// reset next & previous on experience page
+	var resetNextPrev = function() {
+		$('#previous').removeClass('inactive').addClass('pointer');
+		$('#next').removeClass('inactive').addClass('pointer');
 
 		if (currentNum == 0){
-			$('#previous').addClass('inactive');
-			$('#previous').removeClass('pointer');
+			$('#previous').addClass('inactive').removeClass('pointer');
 		}
 		else if (currentNum == 3){
-			$('#next').addClass('inactive');
-			$('#next').removeClass('pointer');
+			$('#next').addClass('inactive').removeClass('pointer');
 		}
 	}
 
-	function nextPage(){
+	var hidePages = function() {
+		for (var i = 0; i < experience.length; i++) {
+			$('#' + experience[i] + '-page').addClass('gone');
+		}
+	}
+
+	var nextPage = function() {
 		if (currentNum == 3){
 			return;
 		}
-		$('#calcentral-page').addClass('gone');
-		$('#rescomp-page').addClass('gone');
-		$('#koinrides-page').addClass('gone');
-		$('#ets-page').addClass('gone');
+		hidePages();
 		currentNum+=1;
 		$('#'+experience[currentNum]+'-left').addClass('push-right');
 		$('#'+experience[currentNum]+'-page').removeClass('gone');
-
 		resetNextPrev();
 	}
 
-	function previousPage(){
+	var previousPage = function() {
 		if (currentNum == 0){
 			return;
 		}
-		$('#calcentral-page').addClass('gone');
-		$('#rescomp-page').addClass('gone');
-		$('#koinrides-page').addClass('gone');
-		$('#ets-page').addClass('gone');
+		hidePages();
 		$('#'+experience[currentNum]+'-left').removeClass('push-right');
 		$('#'+experience[currentNum-1]+'-left').removeClass('gone');
 		currentNum-=1;
 		$('#'+experience[currentNum]+'-page').removeClass('gone');
-
 		resetNextPrev();
 	}
 
-	function closePage(){
+	var closePage = function() {
 		onExperience = false;
-		$('#calcentral-page').addClass('gone');
-		$('#rescomp-page').addClass('gone');
-		$('#koinrides-page').addClass('gone');
-		$('#ets-page').addClass('gone');
-		$('.left-ex').removeClass('push-right');
+		hidePages();
+		$('.left-ex').removeClass('push-right gone');
 		$('.right').removeClass('gone');
-		$('.left-ex').removeClass('gone');
 	}
 
 	$('.logo').click(
-		function(){
+		function() {
 			onExperience = true;
-			var currentID = $(this).attr('id');
+			currentID = $(this).attr('id');
 			currentNum = experience.indexOf(currentID);
 			for (var i = 0; i < currentNum; i++){
 				revealID = experience[i] + '-left';
-				$('#'+revealID).addClass('gone');
-				$('#'+revealID).addClass('push-right');
+				$('#' + revealID).addClass('gone push-right');
 			}
 			revealID = currentID + '-left';
-			$('#'+currentID+'-page').removeClass('gone');
-			$('#'+revealID).addClass('push-right');
+			$('#' + currentID + '-page').removeClass('gone');
+			$('#' + revealID).addClass('push-right');
 			$('.right').addClass('gone');
 			resetNextPrev();
 		}
 	);
 
 	$('#x').click(closePage);
-
 	$('#next').click(nextPage);
 	$('#previous').click(previousPage);
 
-	$('#experience-mobile').click(function( e ){  
+	var top;
+	$('#experience-mobile').click(function(e) {
 	    e.preventDefault();
-	    var top = $("#calcentral-left").offset().top;
+	    top = $("#calcentral-left").offset().top;
 	    $('html, body').stop().animate({scrollTop: top }, 1500);
 	});
 
-	$('#contact-mobile').click(function( e ){  
+	$('#contact-mobile').click(function(e) {
 	    e.preventDefault();
-	    var top = $("#contact").offset().top;
+	    top = $("#contact").offset().top;
 	    $('html, body').stop().animate({scrollTop: top }, 1500);
 	});
-
 });
