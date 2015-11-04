@@ -7,6 +7,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:400,700|Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
@@ -16,21 +17,22 @@
 	<script type="text/javascript" src="js/scripts.js"> </script>
 </head>
 <body>
-	<div class="section left">
+	<div id="left" class="section left">
 		<div class="content-left">
+			<img class="desk" src="images/mydesk.png">
 			<div class="name">
-				<h1>WK</h1>
+				<h1>Winston Kim</h1>
 			</div>
-			<h2>Designer & Developer</h2>
+			<h2>Designer &amp; Developer</h2>
 			<div class="links">
-				<a href="#experience" class="active">Experience</a>
-				<a href="#contact">Contact Me</a>
-				<a id="resume" href="/resume.pdf">Resume</a>
+				<a href="#experience" id="experience-link">Experience</a>
+				<a href="#contact" id="contact-link">Contact Me</a>
+				<a href="#resume" id="resume-link">Resume</a>
 			</div>
 			<div class="links-mobile">
 				<a id="experience-mobile" href="#calcentral-left">Experience</a>
 				<a id="contact-mobile" href="#contact">Contact Me</a>
-				<a id="resume" href="#">Resume</a>
+				<a id="resume-mobile" href="resume.pdf">Resume</a>
 			</div>
 		</div>
 	</div>
@@ -97,7 +99,7 @@
 		</div>
 		<a target="_blank" class="button ets-button" href="https://ets-computing.berkeley.edu/"><h4>View Website</h4></a>
 	</div>
-	<div class="section right-ex">
+	<div id="right-ex" class="section right-ex">
 		<div class="content-right-ex">
 			<div class="table-contain">
 				<div class="x-contain">
@@ -153,7 +155,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="section right">
+	<div id="right" class="section right">
 		<div id="experience" class="content-right">
 			<div class="table-contain">
 				<div class="logo-container">
@@ -219,6 +221,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div id="resume" class="content-right">
+			<iframe src="resume.pdf" 
+style="width:100%; height:100%;" frameborder="0"></iframe>
 		</div>
 	</div>
 	

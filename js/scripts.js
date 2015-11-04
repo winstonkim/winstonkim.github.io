@@ -26,11 +26,13 @@ $(document).ready(function() {
 
 	// find better way to highlight navbar buttons rather than clicks
 	$('.links a').click(function(event){
-		if ($(this).attr('id') === 'resume'){
-			return;
-		}
 		$('.links a').removeClass('active');
 		$(this).addClass('active');
+		// $('#right').removeClass('pushed-right').addClass('pulled-left');
+		// $('#left').removeClass('fullscreen');
+		// setTimeout(function() {
+		// 	$('#right-ex').removeClass('gone');
+		// }, 800);
 	});
 
 	var currentID, className;

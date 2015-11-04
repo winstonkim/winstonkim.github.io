@@ -8,6 +8,11 @@ a {
 	text-decoration: none;
 }
 
+@font-face {
+    font-family: Montserrat-UltraLight;
+    src: url("../fonts/Montserrat-UltraLight.otf");
+}
+
 .section {
 	width: 50%;
 }
@@ -65,25 +70,24 @@ a {
 }
 
 .links{
-	margin: 20px 0px;
+	margin: 20px auto;
+	width: 243px;
 }
 
 .links-mobile{
-	margin: 20px 0px;
+	margin: 20px auto;
+	width: 243px;
 }
 
 .name{
-	height: 150px;
-	width: 150px;
 	margin: auto;
-	border: 1px solid #fff;
 	display: table;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 }
 
 h1{
-	font-family: 'Lato', sans-serif;
-	font-size: 50px;
+	font-family: Montserrat-UltraLight, 'Lato', sans-serif;
+	font-size: 34px;
 	font-weight: 100;
 	text-transform: uppercase;
 	display: table-cell;
@@ -202,12 +206,25 @@ span{
 	border-color: #539fd7;
 }
 
+.desk {
+	margin: 15px 0 20px 0;
+	width: 450px;
+	transition: all .8s;
+}
+
+@media (max-width: 475px) {
+	.desk {
+		margin-left: 26px;
+		width: 300px;
+	}
+}
+
 .left{
 	height: 100%;
-	background-color: #2A6775;
+	background-color: #468ca2;
 	color: white;
 	position: fixed;
-	background: url("../images/background.jpg");
+	/*background: url("../images/background.jpg");*/
 	background-size: cover;
 }
 
@@ -218,7 +235,7 @@ span{
 }
 
 .right{
-	height: 200%;
+	height: 300%;
 	position: absolute;
 	left: 50%;
 	background-color: #fff;
@@ -261,7 +278,7 @@ span{
 }
 
 .content-right{
-	height: 50%;
+	height: 33.33333333333%;
 	text-align: center;
 	display: table;
 	width: 100%;
@@ -278,8 +295,8 @@ span{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -20%);
-	transform: translate(-50%, -20%);
+	-webkit-transform: translate(-50%, -28%);
+	transform: translate(-50%, -28%);
 }
 
 .content-left-ex{
@@ -308,6 +325,18 @@ span{
 
 .pushed-left{
 	left: -2000px;
+}
+
+.pushed-right {
+	margin-left: 2000px;
+}
+
+.pulled-left {
+	margin-left: 0px !important;
+}
+
+#left {
+	transition: all .9s;
 }
 
 .push-right{
@@ -577,4 +606,8 @@ span{
 	height: 75px;
 	margin: 5px;
 	border: solid 1px #ddd;
+}
+
+.fullscreen {
+	width: 100% !important;
 }
