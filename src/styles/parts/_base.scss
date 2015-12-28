@@ -32,6 +32,9 @@ a {
 	position: relative;
 	text-align: center;
 	width: 100%;
+	@media (max-width: 700px) {
+		display: inline-table;
+	}
 	&.fullscreen {
 		height: 100%;
 	}

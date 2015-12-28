@@ -797,14 +797,14 @@ $(function() {
 // Fade on scroll
 $(window).scroll(function(){
   var windowScrollTop = $(window).scrollTop();
-  $( '#landing .wrapper' ).css('opacity', 1 - windowScrollTop / 300);
+  $( '#landing .wrapper' ).css('opacity', 1 - windowScrollTop / 350);
 });
 
 // Project Modals
 window.REMODAL_GLOBALS = {
   NAMESPACE: 'over',
   DEFAULTS: {
-    // hashTracking: false,
+    hashTracking: false,
     closeOnOutsideClick: false
   }
 };
