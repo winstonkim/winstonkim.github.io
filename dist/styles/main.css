@@ -26,9 +26,6 @@ a.button {
   position: relative;
   text-align: center;
   width: 100%; }
-  @media (max-width: 700px) {
-    .section {
-      display: inline-table; } }
   .section.fullscreen {
     height: 100%; }
   .section .wrapper {
@@ -39,6 +36,7 @@ a.button {
 
 #landing {
   background: #e4eff9;
+  display: inline-block;
   height: 500px;
   position: fixed;
   top: 0;
@@ -72,6 +70,9 @@ a.button {
   background: #fff;
   margin-top: 500px;
   transition: all .5s; }
+  @media (max-width: 700px) {
+    #projects {
+      display: inline-table; } }
   #projects .projects-container {
     display: -webkit-flex;
     display: -ms-flexbox;

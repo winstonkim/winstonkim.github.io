@@ -32,9 +32,6 @@ a {
 	position: relative;
 	text-align: center;
 	width: 100%;
-	@media (max-width: 700px) {
-		display: inline-table;
-	}
 	&.fullscreen {
 		height: 100%;
 	}
@@ -48,6 +45,7 @@ a {
 
 #landing {
 	background: $light-blue;
+	display: inline-block;
 	height: 500px;
 	position: fixed;
 	top: 0;
@@ -90,6 +88,9 @@ a {
 	background: $white;
 	margin-top: 500px;
 	transition: all .5s;
+	@media (max-width: 700px) {
+		display: inline-table;
+	}
 	.projects-container {
 		display: flex;
 		flex-flow: row wrap;
