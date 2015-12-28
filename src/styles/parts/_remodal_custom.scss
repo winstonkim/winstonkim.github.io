@@ -1,0 +1,204 @@
+.over-wrapper{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 500;
+	overflow: auto;
+	
+}
+.over{
+	padding: 10rem 0 5rem;
+	display: none;
+	text-align: center;
+	background-color: $white;
+	&.over-is-initialized{
+		display: block;
+	}
+	&.legal{
+		h2,
+		h3{
+			@extend %text-left;
+			font-weight: 400;
+			margin-bottom: .5em; 
+		}
+		p{
+			@extend %text-left;
+		}
+	}
+	h1,
+	h2,
+	ol,
+	p{
+		transition: all .5s ease-out;
+		opacity: .3;
+		margin-bottom: 1.5em;
+	}
+	img {
+		opacity: .3;
+	}
+	h1{
+		color: $gray700;
+		font-size: 2.5rem;
+		padding-bottom: .25em;
+		margin-bottom: .6em;
+		position: relative;
+		border-bottom: 1px solid $gray200;
+		font-weight: 600;
+	}
+	p, ol{
+		color: $gray600;
+		font-weight: 300;
+		line-height: 1.5;
+		&.label-container {
+			margin-bottom: 1.25em;
+		}
+	}
+	.label{
+		display: inline-block;
+		background-color: $gray100;
+		font-size: .8em;
+		color: $gray500; 
+		border-radius: 1em;
+		padding: rem(2) 1rem;
+		margin: .25rem 0;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+	a {
+		color: $dark-blue;
+		text-decoration: none;
+		transition: color .25s;
+		&:hover {
+			color: $blue;
+		}
+	}
+	.button {
+		margin-bottom: 3em;
+		background: $blue;
+		border: solid 1px $blue;
+		color: $white;
+		opacity: .3;
+		transition: all .25s;
+		&:hover {
+			background: $dark-blue;
+			border: solid 1px $dark-blue;
+			color: $white;
+		}
+	}
+	.wrapper{
+		margin: 0 auto;
+		max-width: 52rem;
+		z-index: 110;
+		padding: 0 3rem;
+		@include breakpoint(phone){
+			padding: 0 1.5rem;
+		}
+	}
+	.close{
+		position: absolute;
+		right: 2em;
+		top: 2em;
+		cursor: pointer;
+		width: 5rem;
+		height: 5rem;
+		transition: .35s;
+		&:before,
+		&:after{
+			@include pseudo-box($gray500);
+			width: 100%;
+			height: 1px;
+			top: 50%;
+		}
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+		&:hover{
+			transform: rotate(-180deg);
+		}
+	}
+	.stage{
+		background-color: $gray100;
+		padding: 2.5em;
+		p,
+		ol {
+			margin: 0;
+			padding: .7rem .8rem;
+			text-align: left;
+		}
+		ol {
+			padding-left: 4rem;
+			@include breakpoint(phone){
+				padding-left: 3rem;
+			}
+		}
+		@include breakpoint(phone){
+			padding: .5rem;
+		}
+		img {
+			margin: 1rem auto;
+			&.final {
+				margin: 2rem auto 0 auto;
+			}
+		}
+		h2 {
+			font-weight: 500;
+			text-transform: uppercase;
+			font-size: 20px;
+			margin: 0;
+			padding: .8rem .8rem 0 .8rem;
+			text-align: left;
+		}
+		.flex {
+			margin-bottom: 1rem;
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			img {
+				width: 48%;
+				margin-bottom: 0;
+				@include breakpoint(phone){
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.over-wrapper.over-is-opening {
+	animation: over-opening 0.5s;
+}
+.over-wrapper.over-is-closing {
+	animation: over-closing 0.5s;
+}
+.over.over-is-opened{
+	h1,
+	h2,
+	ol,
+	p,
+	img,
+	.button {
+		opacity: 1;
+	}
+}
+@keyframes over-opening {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+@keyframes over-closing {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(100%);
+	}
+}
