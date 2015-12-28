@@ -8,25 +8,29 @@ body {
 	}
 }
 
-a {
-	&.button {
-		color: $white;
-		background: $blue;
-		border: solid 1px $blue;
-		border-radius: 100px;
-		display: inline-block;
-		font-size: 13px;
-		letter-spacing: 1.5px;
-		padding: 10px 20px;
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: all .25s;
-		&:hover {
-			background: $dark-blue;
-			border: solid 1px $dark-blue;
-		}
+.button {
+	color: $white;
+	background: $blue;
+	border: solid 1px $blue;
+	border-radius: 100px;
+	display: inline-block;
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .25s;
+	&:hover {
+		background: $dark-blue;
+		border: solid 1px $dark-blue;
 	}
 }
+
+.outer-link {
+	display: inherit;
+	margin: 18px;
+}
+
 
 .section {
 	position: relative;
@@ -99,7 +103,6 @@ a {
 	.project-container {
 		background: #f3f3f3;
 		float: left;
-		margin: 18px;
 		width: 250px;
 		transition: all .25s;
 		overflow: hidden;

@@ -6,7 +6,7 @@ body {
   body.noscroll {
     overflow: hidden; }
 
-a.button {
+.button {
   color: #fff;
   background: #b2cddf;
   border: solid 1px #b2cddf;
@@ -18,9 +18,13 @@ a.button {
   text-decoration: none;
   text-transform: uppercase;
   transition: all .25s; }
-  a.button:hover {
+  .button:hover {
     background: #8db3cc;
     border: solid 1px #8db3cc; }
+
+.outer-link {
+  display: inherit;
+  margin: 18px; }
 
 .section {
   position: relative;
@@ -86,7 +90,6 @@ a.button {
   #projects .project-container {
     background: #f3f3f3;
     float: left;
-    margin: 18px;
     width: 250px;
     transition: all .25s;
     overflow: hidden; }
