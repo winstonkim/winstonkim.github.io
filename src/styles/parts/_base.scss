@@ -24,6 +24,11 @@ body {
 		background: $dark-blue;
 		border: solid 1px $dark-blue;
 	}
+	&.chevron {
+		font-size: 18px;
+		padding: 10px;
+		letter-spacing: initial;
+	}
 }
 
 .outer-link {

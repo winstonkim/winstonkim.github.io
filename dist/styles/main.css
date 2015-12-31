@@ -21,6 +21,10 @@ body {
   .button:hover {
     background: #8db3cc;
     border: solid 1px #8db3cc; }
+  .button.chevron {
+    font-size: 18px;
+    padding: 10px;
+    letter-spacing: initial; }
 
 .outer-link {
   display: inherit;
