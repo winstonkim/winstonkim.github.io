@@ -804,7 +804,7 @@ $(window).scroll(function(){
 window.REMODAL_GLOBALS = {
   NAMESPACE: 'over',
   DEFAULTS: {
-    hashTracking: false,
+    // hashTracking: true,
     closeOnOutsideClick: false
   }
 };
