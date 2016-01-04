@@ -18,6 +18,7 @@ $(function() {
 $(window).scroll(function(){
   var windowScrollTop = $(window).scrollTop();
   $( '#landing .wrapper' ).css('opacity', 1 - windowScrollTop / 350);
+  $( '#landing .left-bar' ).css('opacity', 1 - windowScrollTop / 350);
 });
 
 // Project Modals
