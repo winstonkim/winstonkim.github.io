@@ -11,29 +11,29 @@ body {
 	}
 }
 
-.left-bar {
-	border-right: solid 1px $light-blue;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	width: 2.5em;
-	z-index: 2;
-	span {
-		color: $blue;
-		font-size: 12px;
-		left: -180px;
-		letter-spacing: 2;
-		position: absolute;
-		text-align: right;
-		text-transform: uppercase;
-		top: 210px;
-		transform: rotate(-90deg);
-		width: 400px;
-	}
-	@media (max-width: 700px) {
-		display: none;
-	}
-}
+// .left-bar {
+// 	border-right: solid 1px $light-blue;
+// 	height: 100%;
+// 	position: absolute;
+// 	top: 0;
+// 	width: 2.5em;
+// 	z-index: 2;
+// 	span {
+// 		color: $blue;
+// 		font-size: 12px;
+// 		left: -180px;
+// 		letter-spacing: 2;
+// 		position: absolute;
+// 		text-align: right;
+// 		text-transform: uppercase;
+// 		top: 210px;
+// 		transform: rotate(-90deg);
+// 		width: 400px;
+// 	}
+// 	@media (max-width: 700px) {
+// 		display: none;
+// 	}
+// }
 
 .button {
 	color: $white;
@@ -83,25 +83,25 @@ body {
 	position: fixed;
 	top: 0;
 	transition: all .5s;
-	.left-bar {
-		background: $blue;
-		opacity: 1;
-		z-index: 1;
-		span {
-			color: $light-blue;
-			text-align: right;
-			top: 245px;
-			a {
-				color: $white;
-				margin: 0 2px;
-				text-decoration: none;
-				transition: all .25s;
-				&:hover {
-					color: $light-blue;
-				}
-			}
-		}
-	}
+	// .left-bar {
+	// 	background: $blue;
+	// 	opacity: 1;
+	// 	z-index: 1;
+	// 	span {
+	// 		color: $light-blue;
+	// 		text-align: right;
+	// 		top: 245px;
+	// 		a {
+	// 			color: $white;
+	// 			margin: 0 2px;
+	// 			text-decoration: none;
+	// 			transition: all .25s;
+	// 			&:hover {
+	// 				color: $light-blue;
+	// 			}
+	// 		}
+	// 	}
+	// }
 	.desk {
 		width: 450px;
 		transition: all .5s;
@@ -213,10 +213,10 @@ body {
 
 #social {
 	background: $blue;
-	display: none;
-	@media (max-width: 700px) {
-		display: inline-table;
-	}
+	// display: none;
+	// @media (max-width: 700px) {
+	// 	display: inline-table;
+	// }
 	.wrapper {
 		padding: 20px 15px;
 	}

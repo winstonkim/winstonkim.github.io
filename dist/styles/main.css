@@ -8,29 +8,6 @@ body {
   body.noscroll-loader {
     overflow: hidden; }
 
-.left-bar {
-  border-right: solid 1px #e4eff9;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 2.5em;
-  z-index: 2; }
-  .left-bar span {
-    color: #b2cddf;
-    font-size: 12px;
-    left: -180px;
-    letter-spacing: 2;
-    position: absolute;
-    text-align: right;
-    text-transform: uppercase;
-    top: 210px;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    width: 400px; }
-  @media (max-width: 700px) {
-    .left-bar {
-      display: none; } }
-
 .button {
   color: #fff;
   background: #b2cddf;
@@ -72,21 +49,6 @@ body {
   position: fixed;
   top: 0;
   transition: all .5s; }
-  #landing .left-bar {
-    background: #b2cddf;
-    opacity: 1;
-    z-index: 1; }
-    #landing .left-bar span {
-      color: #e4eff9;
-      text-align: right;
-      top: 245px; }
-      #landing .left-bar span a {
-        color: #fff;
-        margin: 0 2px;
-        text-decoration: none;
-        transition: all .25s; }
-        #landing .left-bar span a:hover {
-          color: #e4eff9; }
   #landing .desk {
     width: 450px;
     transition: all .5s; }
@@ -179,11 +141,7 @@ body {
         display: block; } }
 
 #social {
-  background: #b2cddf;
-  display: none; }
-  @media (max-width: 700px) {
-    #social {
-      display: inline-table; } }
+  background: #b2cddf; }
   #social .wrapper {
     padding: 20px 15px; }
   #social span {
