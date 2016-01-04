@@ -53,10 +53,6 @@ body {
     .button.chevron i {
       width: 25px; }
 
-.outer-link {
-  display: inherit;
-  margin: 18px; }
-
 .section {
   position: relative;
   text-align: center;
@@ -125,9 +121,6 @@ body {
   margin-top: 500px;
   transition: all .5s;
   z-index: 2; }
-  @media (max-width: 700px) {
-    #projects {
-      display: inline-table; } }
   #projects .projects-container {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -178,6 +171,12 @@ body {
       margin-top: 0; }
       #projects .wrapper {
         padding: 30px 10px; } }
+  #projects .outer-link {
+    display: inherit;
+    margin: 18px; }
+    @media (max-width: 700px) {
+      #projects .outer-link {
+        display: block; } }
 
 #social {
   background: #b2cddf;
