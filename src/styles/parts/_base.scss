@@ -208,7 +208,7 @@ body {
 	background: $blue;
 	display: none;
 	@media (max-width: 700px) {
-		display: inline-block;
+		display: inline-table;
 	}
 	.wrapper {
 		padding: 20px 15px;
