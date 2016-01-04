@@ -134,11 +134,15 @@ body {
 		position: relative;
 		height: 450px;
 		.desk {
-			width: 300px;
+			width: 280px;
 		}
 		h2 {
 			font-size: 20px;
-			width: 300px;;
+			width: 280px;;
+		}
+		.wrapper {
+			padding: 50px 0 50px 0;
+			opacity: 1;
 		}
 	}
 }

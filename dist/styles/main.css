@@ -112,10 +112,13 @@ body {
       position: relative;
       height: 450px; }
       #landing .desk {
-        width: 300px; }
+        width: 280px; }
       #landing h2 {
         font-size: 20px;
-        width: 300px; } }
+        width: 280px; }
+      #landing .wrapper {
+        padding: 50px 0 50px 0;
+        opacity: 1; } }
 
 #projects {
   background: #fff;
