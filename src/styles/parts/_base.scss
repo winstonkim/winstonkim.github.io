@@ -131,13 +131,14 @@ body {
 		}
 	}
 	@media (max-width: 700px) {
+		position: relative;
 		height: 450px;
 		.desk {
 			width: 300px;
 		}
 		h2 {
 			font-size: 20px;
-			width: 350px;;
+			width: 300px;;
 		}
 	}
 }
@@ -200,7 +201,10 @@ body {
 		}
 	}
 	@media (max-width: 700px) {
-		margin-top: 450px;
+		margin-top: 0;
+		.wrapper {
+			padding: 30px 10px;
+		}
 	}
 }
 
@@ -217,6 +221,7 @@ body {
 		color: $light-blue;
 		font-size: 11px;
 		letter-spacing: 1.5;
+		line-height: 1.5;
 		text-transform: uppercase;
 		a {
 			color: $white;

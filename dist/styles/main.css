@@ -109,12 +109,13 @@ body {
       font-weight: 600; }
   @media (max-width: 700px) {
     #landing {
+      position: relative;
       height: 450px; }
       #landing .desk {
         width: 300px; }
       #landing h2 {
         font-size: 20px;
-        width: 350px; } }
+        width: 300px; } }
 
 #projects {
   background: #fff;
@@ -171,7 +172,9 @@ body {
         padding: 7px 14px; }
   @media (max-width: 700px) {
     #projects {
-      margin-top: 450px; } }
+      margin-top: 0; }
+      #projects .wrapper {
+        padding: 30px 10px; } }
 
 #social {
   background: #b2cddf;
@@ -185,6 +188,7 @@ body {
     color: #e4eff9;
     font-size: 11px;
     letter-spacing: 1.5;
+    line-height: 1.5;
     text-transform: uppercase; }
     #social span a {
       color: #fff;
