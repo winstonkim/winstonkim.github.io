@@ -25,7 +25,6 @@ $(window).scroll(function(){
 window.REMODAL_GLOBALS = {
   NAMESPACE: 'over',
   DEFAULTS: {
-    // hashTracking: true,
     closeOnOutsideClick: false
   }
 };
