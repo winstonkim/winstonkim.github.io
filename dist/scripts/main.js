@@ -805,12 +805,11 @@ $(window).scroll(function(){
 window.REMODAL_GLOBALS = {
   NAMESPACE: 'over',
   DEFAULTS: {
-    // hashTracking: true,
     closeOnOutsideClick: false
   }
 };
 /*
- *  Remodal - v1.0.6
+ *  Remodal - v1.1.1
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
  *  http://vodkabears.github.io/remodal/
  *
@@ -890,7 +889,8 @@ window.REMODAL_GLOBALS = {
     closeOnCancel: true,
     closeOnEscape: true,
     closeOnOutsideClick: true,
-    modifier: ''
+    modifier: '',
+    appendTo: null
   }, global.REMODAL_GLOBALS && global.REMODAL_GLOBALS.DEFAULTS);
 
   /**
@@ -1012,7 +1012,7 @@ window.REMODAL_GLOBALS = {
       }
     }
 
-    return num;
+    return max;
   }
 
   /**
@@ -1021,7 +1021,7 @@ window.REMODAL_GLOBALS = {
    * @returns {Number}
    */
   function getScrollbarWidth() {
-    if ($(document.body).height() <= $(window).height()) {
+    if ($(document).height() <= $(window).height()) {
       return 0;
     }
 
@@ -1060,8 +1060,8 @@ window.REMODAL_GLOBALS = {
       return;
     }
 
-    var $html = $('body');
-    var lockedClass = ('noscroll');
+    var $html = $('html');
+    var lockedClass = namespacify('is-locked');
     var paddingRight;
     var $body;
 
@@ -1085,8 +1085,8 @@ window.REMODAL_GLOBALS = {
       return;
     }
 
-    var $html = $('body');
-    var lockedClass =('noscroll');
+    var $html = $('html');
+    var lockedClass = namespacify('is-locked');
     var paddingRight;
     var $body;
 
@@ -1317,6 +1317,7 @@ window.REMODAL_GLOBALS = {
    */
   function Remodal($modal, options) {
     var $body = $(document.body);
+    var $appendTo = $body;
     var remodal = this;
 
     remodal.settings = $.extend({}, DEFAULTS, options);
@@ -1325,9 +1326,13 @@ window.REMODAL_GLOBALS = {
 
     remodal.$overlay = $('.' + namespacify('overlay'));
 
+    if (remodal.settings.appendTo !== null && remodal.settings.appendTo.length) {
+      $appendTo = $(remodal.settings.appendTo);
+    }
+
     if (!remodal.$overlay.length) {
       remodal.$overlay = $('<div>').addClass(namespacify('overlay') + ' ' + namespacify('is', STATES.CLOSED)).hide();
-      $body.append(remodal.$overlay);
+      $appendTo.append(remodal.$overlay);
     }
 
     remodal.$bg = $('.' + namespacify('bg')).addClass(namespacify('is', STATES.CLOSED));
@@ -1347,7 +1352,7 @@ window.REMODAL_GLOBALS = {
         namespacify('is', STATES.CLOSED))
       .hide()
       .append(remodal.$modal);
-    $body.append(remodal.$wrapper);
+    $appendTo.append(remodal.$wrapper);
 
     // Add the event listener for the close button
     remodal.$wrapper.on('click.' + NAMESPACE, '[data-' + PLUGIN_NAME + '-action="close"]', function(e) {
@@ -1444,7 +1449,7 @@ window.REMODAL_GLOBALS = {
     var remodal = this;
 
     // Check if the animation was completed
-    if (remodal.state === STATES.OPENING || remodal.state === STATES.CLOSING) {
+    if (remodal.state === STATES.OPENING || remodal.state === STATES.CLOSING || remodal.state === STATES.CLOSED) {
       return;
     }
 
