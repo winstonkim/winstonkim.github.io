@@ -1,423 +1,111 @@
 <html>
 <head>
-	<title>Winston Kim</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winston Kim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- FAVICONS -->
-	<link href="dist/images/favicon/succulent.png" rel="icon" sizes="196x196" type="image/png">
+  <!-- FAVICONS -->
 
-	<!-- STYLESHEETS -->
-	<link rel="stylesheet" type="text/css" href="dist/styles/combined.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" type="text/css" href="dist/styles/combined.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<!-- FONTS -->
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,100,200,300,500,600,800,900' rel='stylesheet' type='text/css'>
+  <!-- FONTS -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,100,200,300,500,600,800,900' rel='stylesheet' type='text/css'>
 
-	<!-- JQUERY -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <!-- JQUERY -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-	<!-- PRELOADER -->
-	<script>
-		$(window).load(function() {
-			$('.loader').delay(1800).fadeOut();
-			$('#preloader').delay(2200).fadeOut('slow');
-			setTimeout(function(){
-				$('body').removeClass('noscroll-loader');
-			}, 2400);
-		})
-	</script>
 </head>
-<body class="noscroll-loader">
-	<div id="preloader">
-		<div class="loader">
-			<?xml version="1.0" encoding="utf-8"?>
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 47.8 53.8" style="enable-background:new 0 0 47.8 53.8;" xml:space="preserve">
-			<style type="text/css">
-				.st0{fill:#E4EFFA;}
-				.st1{fill:#5C86A0;}
-			</style>
-			<g class="leaves">
-				<g class="leaf-right">
-					<path class="st0" d="M39.1,23.1C34.6,27.7,25,25.5,25,25.5s-2.2-9.6,2.4-14.1C31.9,6.8,41.5,9,41.5,9S43.7,18.6,39.1,23.1z"/>
-					<path d="M30.2,27c-2.9,0-5.2-0.5-5.4-0.6l-0.6-0.1L24,25.7c-0.1-0.4-2.3-10.2,2.7-15c4.8-4.9,14.6-2.8,15-2.7l0.6,0.1l0.1,0.6
-					c0.1,0.4,2.3,10.2-2.7,15C37.3,26.4,33.4,27,30.2,27z M25.9,24.6C28,25,35,25.9,38.4,22.4l0,0C41.9,19,41,12,40.6,9.9
-					c-2.1-0.4-9.1-1.3-12.5,2.2C24.6,15.5,25.5,22.5,25.9,24.6z"/>
-				</g>
-				<g class="leaf-left">
-					<path class="st0" d="M20.5,11.4c4.6,4.6,2.4,14.1,2.4,14.1s-9.6,2.2-14.1-2.4S6.3,9,6.3,9S15.9,6.8,20.5,11.4z"/>
-					<path d="M17.7,27c-3.2,0-7.1-0.6-9.7-3.2c-4.8-4.9-2.9-14.6-2.8-15l0.1-0.6L6.1,8c0.4-0.1,10.2-2.3,15.1,2.7l0,0
-					c4.9,4.9,2.8,14.6,2.7,15l-0.1,0.6l-0.6,0.1C22.9,26.5,20.6,27,17.7,27z M7.2,9.9c-0.3,2.1-1.1,9,2.3,12.6
-					c3.4,3.5,10.4,2.6,12.5,2.2c0.4-2.1,1.3-9-2.3-12.5C16.3,8.6,9.3,9.5,7.2,9.9z"/>
-				</g>
-				<g class="leaf-middle">
-					<path class="st0" d="M32.3,14.4c0,6.4-8.3,11.7-8.3,11.7s-8.3-5.2-8.3-11.7S24,2.7,24,2.7S32.3,7.9,32.3,14.4z"/>
-					<path d="M24,27.3l-0.5-0.3c-0.4-0.2-8.8-5.6-8.8-12.5s8.4-12.3,8.8-12.5L24,1.5l0.5,0.3c0.4,0.2,8.8,5.6,8.8,12.5
-					c0,6.9-8.4,12.3-8.8,12.5L24,27.3z M24,3.9c-1.8,1.2-7.3,5.5-7.3,10.5c0,5,5.5,9.2,7.3,10.5c1.8-1.3,7.3-5.6,7.3-10.5
-					C31.3,9.4,25.8,5.1,24,3.9z"/>
-				</g>
-				<g>
-					<polygon class="st1" points="37.2,52.2 10.7,52.2 6.3,29.8 41.5,29.8 		"/>
-					<path d="M38,53.2H9.9L5.1,28.8h37.6L38,53.2z M11.5,51.2h24.9l3.9-20.4H7.5L11.5,51.2z"/>
-				</g>
-				<g>
-					<polygon class="st1" points="44.1,31.3 3.7,31.3 2.5,25.5 45.3,25.5 		"/>
-					<path d="M44.9,32.3h-42l-1.6-7.8h45.3L44.9,32.3z M4.5,30.3h38.8l0.8-3.8H3.7L4.5,30.3z"/>
-				</g>
-			</g>
-		</svg>
-	</div>
-</div>
-<div id="landing" class="section">
-		<div class="wrapper">
-			<img src="dist/images/landing/desk.png" class="desk">
-			<h2>Hi, I'm <span class="accent">Winston Kim</span>, a <span class="bold">designer</span> and <span class="bold">developer</span> currently studying Computer Science at UC Berkeley.</h2>
-			<a href="#projects" class="button chevron"><i class="fa fa-angle-down fa-1x"></i></a>
-		</div>
-	</div>
-	<div id="projects" class="section">
-		<div class="wrapper">
-			<div class="projects-container">
-				<a class="outer-link" data-remodal-target="elo">
-					<div class="project-container">
-						<img src="dist/images/projects/elo.png">
-						<div class="project-text-container">
-							<h3>ELO</h3>
-							<p>UI Design &amp;<br> Android Development</p>
-						</div>
-					</div>
-				</a>
-				<a class="outer-link" data-remodal-target="calcentral">
-					<div class="project-container">
-						<img src="dist/images/projects/calcentral.png">
-						<div class="project-text-container">
-							<h3>CalCentral</h3>
-							<p>Full Stack Development</p>
-						</div>
-					</div>
-				</a>
-				<a class="outer-link" data-remodal-target="rescomp">
-					<div class="project-container">
-						<img src="dist/images/projects/rescomp.png">
-						<div class="project-text-container">
-							<h3>Residential Computing</h3>
-							<p>Web Design &amp; Development</p>
-						</div>
-					</div>
-				</a>
-				<a class="outer-link" data-remodal-target="koinrides">
-					<div class="project-container">
-						<img src="dist/images/projects/koinrides.png">
-						<div class="project-text-container">
-							<h3>KoinRides</h3>
-							<p>UI Design &amp;<br> Full Stack Development</p>
-						</div>
-					</div>
-				</a>
-				<a class="outer-link" data-remodal-target="ets">
-					<div class="project-container">
-						<img src="dist/images/projects/ets.png">
-						<div class="project-text-container">
-							<h3>ETS Computer Facilities</h3>
-							<p>Web Design &amp; Development</p>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
+<body>
 
-	<!-- MODALS START HERE -->
-	<div class="over" data-remodal-id="elo">
-		<div class="close" data-remodal-action="close"></div>
-		<div class="wrapper">
-			<h1>ELO</h1>
-			<p>
-				<span class="label">UI/UX Design</span>
-				<span class="label">Java</span>
-				<span class="label">Android</span>
-				<span class="label">Mobile</span>
-				<span class="label">Wear</span>
-			</p>
-			<p>
-				ELO is an Android application that facilitates public speakers with their presentations through nonintrusive alerts and keywords by smartwatch and provides presentation analytics to their mobile device.
-			</p>
-			<a target="_blank" href="https://bitbucket.org/cs160group31/elo" class="button">View Source</a>
-			<div class="stage">
-				<p>
-					In CS160, a UC Berkeley course that teaches the principles of UI and UX design, our final class project was to work in a team of five students to create an Android application that utilizes both a mobile and wear platform.
-				</p>
-				<h2>What is ELO?</h2>
-				<p>
-					In traditional presentations, it can be difficult to pace oneself, change slides, etc. while remaining mobile and engaged with the audience. ELO aims to solve that by putting presentation aids onto a smartwatch, so presenters can receive timing alerts and advance slides with minimal break in their overall flow. In addition, the app contains an array of practice tools to help presenters adjust and practice their timing, divide the presentation into sections, and rely less on written notes.
-				</p>
-				<h2>Wireframes</h2>
-				<p>
-					Before committing our ideas to Sketch and Illustrator, we drew wireframes in pencil and paper to map out the interaction and figure out the rudimentary layout design. These pencil and paper sketches proved a very quick way to communicate our ideas and discuss the overall design of the application.
-				</p>
-				<img src="dist/images/elo/wireframes.png">
-				<h2>Design Iterations</h2>
-				<p>
-					Our first screens were pretty disorganized, as we didn’t coordinate to establish a unified visual design scheme.
-				</p>
-				<img src="dist/images/elo/iteration1.png">
-				<p>
-					Later, we updated our design to establish a consistent visual identity for ELO. We did this by designing a blue­based color scheme and using consistent typography.
-				</p>
-				<img src="dist/images/elo/iteration2.png">
-				<p>
-					After contextual inquiries, many user studies, and feedback from our course staff, we decided to redesign ELO as a practice­-focused app. We learned that what presenters cared most about was pacing. So redesigning ELO as a practice app to help presenters practice seemed like a great idea, and the following design iterations reflect that change of focus.
-				</p>
-				<img src="dist/images/elo/iteration3.png">
-				<p>
-					To do this, we redesigned the watch screen so that timing was the most important feature, and moved the notes screen to a quasimode, so we could track how many times presenters peeked at their notes. We also restructured the analytics page to feature presentation analytics from previous practice runs, and also added in section­-by-­section breakdowns of pacing for finer-­granularity analytics. Finally, we restructured the navigation into tab views to make it easier to switch between the analytics, timers, and sections screens for the same presentation.
-				</p>
-				<h2>Conclusion</h2>
-				<p>
-					Over the semester, our designs matured and the scope of our project morphed into the specific vision we had: that speakers can use our app not only to handle the technical side of presentations, but to freely engage and connect with their audiences as well.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="over" data-remodal-id="calcentral">
-		<div class="close" data-remodal-action="close"></div>
-		<div class="wrapper">
-			<h1>CalCentral</h1>
-			<p>
-				<span class="label">Front-end</span>
-				<span class="label">AngularJS</span>
-				<span class="label">SCSS</span>
-				<span class="label">Node.js</span>
-				<span class="label">Gulp.js</span>
-			</p>
-			<p>
-				CalCentral is UC Berkeley's new online portal providing a unified and personalized one-stop way to access your UC Berkeley email, calendar, shared documents and class collaboration spaces, as well as links to key campus services and resources. As a Full Stack Developer, I focus on implementing the design of widgets using AngularJS and SCSS.
-			</p>
-			<p>CalCentral is an <a target="_blank" href="https://github.com/ets-berkeley-edu/calcentral">open source project</a>. See my contributions to the repository <a target="_blank" href="https://github.com/ets-berkeley-edu/calcentral/commits?author=winstonkim">here</a>.
-			</p>
-			<a target="_blank" href="https://www.youtube.com/watch?v=EQ-a7xrfVag" class="button">View Video</a>
-			<div class="stage">
-				<p>
-					Starting work as a Full Stack Developer at CalCentral has definitely been a great experience as it's the first time working on an application that serves over thousands of people. Since day one, it's amazing how much I learned about developing for a large-scale application and, more specifically, about JavaScript and how it plays into the front-end aspects of an app.
-				</p>
-				<h2>What I Do</h2>
-				<p>
-					At work, I focus on implementing the designs of widget from the UX Team using AngularJS, Node.js, and SCSS. It's often a challenge to get these tasks done because UC Berkeley doesn't formally teach JavaScript, but my <a target="_blank" href="http://denbuzze.com/">mentor at work</a>, a front-end master, never ceases to find a solution to my problems. I would love to show some screenshots of the things I worked on, but most of the features aren't live yet ... so we'll have to wait until then!
-				</p>
-				<p>
-					Other than implementing widgets, I was also given the hefty task of changing the front-end structure of CalCentral by implementing <a target="_blank" href="http://browserify.org/">Browserify</a>, which was challenging because the former structure was already deeply established. In addition, I also implemented some front-end tools, such as <a href="https://www.browsersync.io/">Browsersync</a>. Along the way, I became acquainted to <a target="_blank" href="http://gulpjs.com/">Gulp.js</a>, the build system that CalCentral is using that is used widely in industry, and <a target="_blank" href="https://nodejs.org/en/">Node.js</a>. Learning about these tools and build systems really changed the way I develop. Even as I made this website, I couldn't help but to use Gulp, Node, and Browsersync.
-				</p>
-				<p>
-					Stay tuned for updates!
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="over" data-remodal-id="rescomp">
-		<div class="close" data-remodal-action="close"></div>
-		<div class="wrapper">
-			<h1>Residential Computing</h1>
-			<p>
-				<span class="label">HTML</span>
-				<span class="label">SCSS</span>
-				<span class="label">JavaScript</span>
-				<span class="label">PHP</span>
-				<span class="label">UI Design</span>
-				<span class="label">Branding</span>
-			</p>
-			<p>
-				Residential Computing supports broadband, reliable network connections throughout the residence halls and campus apartments in UC Berkeley, including wireless connectivity in dining facilities and many other common spaces. As the web designer, I design the layout of new pages and implement them.
-			</p>
-			<a target="_blank" href="http://rescomp.berkeley.edu" class="button">View Website</a>
-			<div class="stage">
-				<p>
-					Coming into ResComp less than a year ago, it was my first time working on a website that had so much content spread over so many pages. The Marketing team had already started to transform the ResComp brand into something new and modern, and that meant a lot of redesigning outdated pages.
-				</p>
-				<p>
-					The first project I took on was redesigning some of the team pages, which were pretty out-of-date and old-fashioned. The ResComp website originally had an interesting color scheme (dark grey, orange, green), and our team decided to take a step in a different direction proposing colors that would be cleaner and simpler (white and blue). After several iterations of mock-ups on Illustrator, I got working, and we were pretty pleased with <a target="_blank" href="https://rescomp.berkeley.edu/units/u1">the result</a>. Before and after shots below.
-				</p>
-				<img src="dist/images/rescomp/unit1_beforeafter.png">
-				<p>
-					Similarly, with the help of <a target="_blank" href="http://annanguyen.co">Anna</a>, ResComp's Graphic Designer, I also redesigned some core pages, such as the <a target="_blank" href="https://rescomp.berkeley.edu/about/jobs">jobs</a> page and <a href="https://www.rescomp.berkeley.edu/about/jobs/customerserviceandsupport/desktopconsultant/">job position page</a>, with the same style branding.
-				</p>
-				<p>
-					In addition, I attribute a lot of my current CSS knowledge to my time at ResComp. Often times, my team would come up with different visual effects to make the site more interactive and user-friendly, and, as a result, I would have to research online and view tutorials to implement them. Check out some of the effects implemented purely with CSS down below!
-				</p>
-				<div class="flex">
-					<img src="dist/images/rescomp/dropdown.gif">
-					<img src="dist/images/rescomp/hover_team.gif">
-					<img src="dist/images/rescomp/hover_department.gif">
-				</div>
-				<p>
-					Finally, the last project I would like to mention is <a target="_blank" href="https://rescomp.berkeley.edu/hackthehuman">Hack the Human</a>. Every year in October, ResComp partipcates in Cyber Security month by producing some kind of marketing material to spread awareness, and this year, I was given the responsibility to design and implement this website along with Anna. Though the website didn't follow our branding guide, it was fun to think outside of the box to create an unconventional website.
-				</p>
-				<img src="dist/images/rescomp/hackthehuman.png">
-				<p>
-					Overall, my time in ResComp has definitely been an enriching experience to bolster my web developing skills and ability to maintain a large-scale website. In the future, I plan to create a new style guide for the website that goes with our new branding, so stay tuned for updates about that!
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="over" data-remodal-id="koinrides">
-		<div class="close" data-remodal-action="close"></div>
-		<div class="wrapper">
-			<h1>KoinRides</h1>
-			<p>
-				<span class="label">Ruby on Rails</span>
-				<span class="label">jQuery UI</span>
-				<span class="label">JavaScript</span>
-				<span class="label">SCSS</span>
-				<span class="label">UI Design</span>
-			</p>
-			<p>
-				KoinRides is a Rails application that allows administrators to centralize management of cars, events, and students, communicate with students about rides, and organize rides with a user-friendly UI. Working in a team of six, I focused on the UI design and front-end aspects of the application.
-			</p>
-			<p>
-				The source code of the application can be found <a target="_blank" href="http://github.com/wesley-hsu/koinrides">here</a>.
-			</p>
-			<a target="_blank" href="http://koinrides.heroku.com" class="button">View Application</a>
-			<div class="stage">
-				<p>
-					In CS169, a UC Berkeley course that teaches the principles of software engineering, our final class project was to work in a team of six students to create a Rails application using agile methodologies for a non-profit organization.
-				</p>
-				<h2>The Problem</h2>
-				<p>
-					Our client has the job of organizing rides on a weekly basis for up to 30-40 students, and up to this point he has been limited to Google spreadsheets and massive extended sessions of frantic texting about whether or not people can go to events.
-				</p>
-				<p>
-					The problems that our client frequently ran into are:
-				</p>
-				<ol>
-					<li>
-						Not knowing if cars are available for each event he has to plan
-					</li>
-					<li>
-						People changing their minds constantly about attending events, leading to a lot of texting and rearranging
-					</li>
-					<li>
-						Hard to manage so many students through texts and emails without forgetting people
-					</li>
-				</ol>
-				<h2>Our Solution</h2>
-				<p>
-					Using a standalone Rails app, KoinRides allows administrators to:
-				</p>
-				<ol>
-					<li>
-						Centralize management of cars, events, and students altogether
-					</li>
-					<li>
-						Communicate with students about rides through automated emails
-					</li>
-					<li>
-						Organize rides with a user-friendly UI
-					</li>
-				</ol>
-				<p>
-					While developing this application, we met weekly in scrums, practiced pair programming, and used various tools used in industry today. For instance, we used Pivotal Tracker to manage the distribution of features, Code Climate to check that over 95% of our code was covered by Cucumber, Jasmine, and RSpec tests, and Travis CI to ensure that all of our tests were passing.
-				</p>
-				<p>
-					The main feature that I worked on was implementing a drag and drop UI using jQuery UI. It was a challenge implementing this as I wasn't well-acquainted with any type of JavaScript. Nonetheless, battling through the jQuery UI libraries definitely helped me grow in my documentation deciphering and stackoverflow searching abilities. Also for this feature, I had to keep track of all interactions of the drag and drop UI in a JSON and make an AJAX call to update the database, allowing me to learn about the intersection of where front-end and back-end aspects meet.
-				</p>
-				<img src="dist/images/koinrides/draganddrop.gif">
-				<p>
-					The other feature I worked on was styling the application using SCSS. Even though the project didn't require extensive styling, I had fun designing a logo, choosing a color scheme, and styling the UI in a simple, clean manner.
-				</p>
-				<div class="flex">
-					<img src="dist/images/koinrides/login.jpg">
-					<img src="dist/images/koinrides/dashboard.jpg">
-					<img src="dist/images/koinrides/dragdrop.jpg">
-					<img src="dist/images/koinrides/forgot.jpg">
-				</div>
-				<p>
-					Overall, building this application helped me understand how front-end development fit into the full stack. Not only did it provide me with experience with agile methodologies and software engineering practices, but also formed in me a passion for UI and front-end development.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="over" data-remodal-id="ets">
-		<div class="close" data-remodal-action="close"></div>
-		<div class="wrapper">
-			<h1>ETS Computer Facilities</h1>
-			<p class="label-container">
-				<span class="label">HTML</span>
-				<span class="label">CSS</span>
-				<span class="label">jQuery</span>
-				<span class="label">Bootstrap 4</span>
-				<span class="label">PHP</span>
-			</p>
-			<p>
-				ETS Computer Facilities provide convenient and secure on-campus computing facilities for registered UC Berkeley students, staff, and faculty. As the Web Development Function Lead, I designed and developed a client-facing website that provided relevant information for students.
-			</p>
-			<a target="_blank" href="http://ets-computing.berkeley.edu" class="button">View Website</a>
-			<div class="stage">
-				<h2>The Problem</h2>
-				<p>
-					When opening an internet browser on one of the computers of ETS Computer Facilities, clients were directed to the facility's <a target="_blank" href="https://www.ets.berkeley.edu/discover-services/drop-computer-facilities">former homepage</a>. However, we found that students didn't read any of the page's content due to the following problems:
-				</p>
-				<ol>
-					<li>
-						There's too much text. People don't like reading.
-					</li>
-					<li>
-						It's difficult to navigate because there are so many links.
-					</li>
-					<li>
-						It wasn't visually appealing, and that's pretty important to college students.
-					</li>
-				</ol>
-				<h2>The Solution</h2>
-				<p>
-					Hence, we felt a need to create a separate, relevant webpage that would accomplish two goals:
-				</p>
-				<ol>
-					<li>
-						Cut down on extraneous content and simplify information so that students can see what they need and want to know regarding the facilities.
-					</li>
-					<li>
-						Establish our brand identity within the UC Berkeley campus.
-					</li>
-				</ol>
-				<h2>The Process</h2>
-				<p>
-					After surveying my supervisor, co-workers, and fellow classmates, I determined the areas of information that were essential for students to know - hours and locations, offered services, and job opportunities.
-				</p>
-				<p>
-					With this information, I began to sketch lofi mock-ups of the webpage - slightly changing each iteration after receiving feedback from co-workers and other students. After several revisions, I produced a high-fidelity mock-up on Photoshop.
-				</p>
-				<img src="dist/images/ets/mockups.jpg">
-				<p>
-					In terms of developing, I had little experience with HTML and CSS, and I decided to use a framework to get started. Using Bootstrap 4, I was able to learn about and use a responsive grid system to lay out the page. I also became familiar with utilizing @media queries to produce responsive views for all screensizes.
-				</p>
-				<h2>Conclusion</h2>
-				<p>
-					This was the first website that I designed and developed. While making it, I gained a greater familiarity with HTML syntax, CSS properties, jQuery, and PHP scripting (used in the page's contact form). In fact, I actually attribute my current passion in web design and development to this project.
-				</p>
-				<p>
-					Later on, I developed ETS Computer Facilities' <a target="_blank" href="http://ets-computing.berkeley.edu/jobs">jobs page</a>, which was a huge improvement from its <a target="_blank" href="http://cafe.berkeley.edu/jobs">former one</a>, and <a target="_blank" href="http://ets-computing.berkeley.edu/wireless">wireless printing informational page</a>.
-				</p>
-				<img class="final" src="dist/images/ets/website.jpg">
-			</div>
-		</div>
-	</div>
-	<div id="social" class="section">
-		<div class="wrapper">
-			<span><a target="_blank" href="http://behance.net/winstonkim">Behance</a> &diams; <a target="_blank" href="http://flickr.com/winston-kim">Flickr</a> &diams; <a target="_blank" href="mailto:winstonkim@berkeley.edu">Email</a> &diams; <a target="_blank" href="http://github.com/winstonkim">Github</a> &diams; <a target="_blank" href="http://linkedin.com/in/winstonkim">LinkedIn</a></span>
-		</div>
-	</div>
+<div>
+  <div class="about">
+    <div class="container about_container">
+      <div class="about_title">Winston Kim</div>
+      <div class="about_description">
+        <div>User interface developer.</div>
+        <div>Self-taught designer.</div>
+        <div>Avid photographer.</div>
+      </div>
+      <ul class="about_contact">
+        <li class="about_contactItem">
+          <a href="mailto:winstonkim@berkeley.edu">Email</a>
+        </li>
+        <li class="about_contactItem">
+          <a href="https://github.com/winstonkim">Github</a>
+        </li>
+        <li class="about_contactItem">
+          <a href="https://linkedin.com/in/winstonkim">LinkedIn</a>
+        </li>
+        <li class="about_contactItem">
+          <a href="https://flickr.com/winston-kim">Flickr</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="experience experience-guidebook">
+    <div class="experience_left">
+      <div class="experience_image">
+        <img src="./dist/images/guidebook.jpg">
+      </div>
+    </div>
+    <div class="experience_right">
+      <div class="experience_title">Guidebook Inc.</div>
+      <div class="experience_position">User Interface Developer</div>
+      <div class="experience_description">
+        As a UI developer, I was responsible for constructing the look and feel of the web portal for Guidebook using ReactJS and Sass. Usability and design are some of the key elements that make Guidebook's product stand out, so my role was pretty crucial as everything I developed had to be pixel perfect, visually appealing, and easy for people to use.
+      </div>
+      <a target="_blank" href="https://guidebook.com" class="experience_action">View site</a>
+    </div>
+  </div>
+
+  <div class="experience experience-calcentral">
+    <div class="experience_left">
+      <div class="experience_image">
+        <img src="./dist/images/calcentral.png">
+      </div>
+    </div>
+    <div class="experience_right">
+      <div class="experience_title">CalCentral</div>
+      <div class="experience_position">Frontend Developer</div>
+      <div class="experience_description">
+        CalCentral is UC Berkeley's new open-source portal providing a unified and personalized one-stop way to access your UC Berkeley email, calendar, shared documents and class collaboration spaces, as well as links to key campus services and resources. As a Frontend Developer, I focused on implementing widgets using AngularJS and Sass.
+      </div>
+      <a target="_blank" href="https://github.com/ets-berkeley-edu/calcentral" class="experience_action">View repo</a>
+    </div>
+  </div>
+
+  <div class="experience experience-rescomp">
+    <div class="experience_left">
+      <div class="experience_image">
+        <img src="./dist/images/rescomp.jpg">
+      </div>
+    </div>
+    <div class="experience_right">
+      <div class="experience_title">ResComp</div>
+      <div class="experience_position">Web Designer</div>
+      <div class="experience_description">
+        Residential Computing supports broadband, reliable network connections throughout the residence halls and campus apartments in UC Berkeley, including wireless connectivity in dining facilities and many other common spaces. As the web designer, I designed and developed client-facing pages. I also had some opportunities to create the UI for some internal apps that Rescomp used.
+      </div>
+      <a target="_blank" href="https://rescomp.berkeley.edu/about/jobs/" class="experience_action">View site</a>
+    </div>
+  </div>
+</div>
+
 </body>
 <!-- JAVASCRIPT -->
 <script type="text/javascript" src="dist/scripts/main.min.js"></script>
 
 <!-- GOOGLE ANALYTICS -->
 <script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-58139201-1', 'auto');
-	ga('send', 'pageview');
+  ga('create', 'UA-58139201-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 </html>

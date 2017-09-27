@@ -18,6 +18,11 @@ browserSync = require('browser-sync').create(),
 streamqueue = require('streamqueue');
 
 var paths = {
+  css: [
+        // Remodal
+        'node_modules/remodal/dist/remodal.css',
+        'node_modules/remodal/dist/remodal-default-theme.css'
+        ],
       // SCSS Files
       scss: [
         // Main CSS File
@@ -25,7 +30,9 @@ var paths = {
         ],
       // JavaScript
       js: {
+        // Internal Javascript
         internal: 'src/scripts/*.js',
+        // Remodal
         external: 'node_modules/remodal/dist/remodal.js',
       }
     };
@@ -42,6 +49,7 @@ gulp.task('browser-sync', ['styles'], function() {
 // Styles
 gulp.task('styles', function() {
   return streamqueue({objectMode: true},
+    gulp.src(paths.css),
     gulp.src(paths.scss)
     .pipe(sass())
     .pipe(autoprefixer('last 2 version'))
