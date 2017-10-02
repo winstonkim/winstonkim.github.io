@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  padding: $spacing * 2;
+
+  .container_title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .container_subtitle {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 700px) {
+    padding: $spacing;
+  }
+}

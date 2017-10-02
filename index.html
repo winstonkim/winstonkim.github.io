@@ -17,33 +17,185 @@
 
 </head>
 <body>
-
-  <div>
-    <div class="about">
-      <div class="container about_container">
-        <div class="about_title">Winston Kim</div>
-        <div class="about_description">
-          <div>User interface developer.</div>
-          <div>Self-taught designer.</div>
-          <div>Avid photographer.</div>
+  <div class="flex flex-column fullHeight">
+    <!-- INTRO -->
+    <div class="container">
+      <div class="flex flex-spreadApart flex-spaced flex-mobileStackReverse">
+        <div class="flex_item-half">
+          <div class="container_title">Winston Kim</div>
+          <div class="container_subtitle">
+            <div>UI engineer & self-taught designer in the Bay Area. Studied Computer Science @ UC Berkeley.</div>
+          </div>
         </div>
-        <ul class="about_contact">
-          <li class="about_contactItem">
-            <a href="mailto:winstonkim@berkeley.edu">Email</a>
-          </li>
-          <li class="about_contactItem">
-            <a href="https://github.com/winstonkim">Github</a>
-          </li>
-          <li class="about_contactItem">
-            <a href="https://linkedin.com/in/winstonkim">LinkedIn</a>
-          </li>
-          <li class="about_contactItem">
-            <a href="https://flickr.com/winston-kim">Flickr</a>
-          </li>
-        </ul>
+        <div>
+          <img class="profileImage" src="./dist/images/me.jpg">
+        </div>
       </div>
     </div>
 
+    <!-- EXPERIENCE -->
+    <div class="container">
+      <div class="flex flex-wrap">
+
+        <!-- GUIDEBOOK  -->
+        <div class="experienceTile experienceTile-guidebook">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              Guidebook
+            </div>
+            <div class="experienceTile_position">
+              UI Developer
+            </div>
+            <a href="https://guidebook.com" class="button">
+              View site
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/guidebook.svg" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+        <!-- GTS (?) -->
+        <!-- <div class="experienceTile experienceTile-graceapps">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              GraceApps
+            </div>
+            <div class="experienceTile_position">
+              UI Designer & Developer
+            </div>
+            <a href="#" class="button">
+              More info
+            </a>
+          </div>
+        </div> -->
+
+        <!-- ELO -->
+        <div class="experienceTile experienceTile-elo">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              Elo
+            </div>
+            <div class="experienceTile_position">
+              UI Designer
+            </div>
+            <a href="https://bitbucket.org/cs160group31/elo" class="button">
+              View repo
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/elo.png" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+        <!-- CALCENTRAL -->
+        <div class="experienceTile experienceTile-calcentral">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              CalCentral
+            </div>
+            <div class="experienceTile_position">
+              Frontend Developer
+            </div>
+            <a href="https://github.com/ets-berkeley-edu/calcentral" class="button">
+              View repo
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/calcentral.svg" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+        <!-- RESCOMP -->
+        <div class="experienceTile experienceTile-rescomp">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              ResComp
+            </div>
+            <div class="experienceTile_position">
+              Web Designer
+            </div>
+            <a href="https://rescomp.berkeley.edu/about/jobs/" class="button">
+              View site
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/rescomp.png" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+        <!-- KoinRides -->
+        <div class="experienceTile experienceTile-koinrides">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              KoinRides
+            </div>
+            <div class="experienceTile_position">
+              UI Designer & Developer
+            </div>
+            <a href="https://github.com/ets-berkeley-edu/calcentral" class="button">
+              View repo
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/koinrides.png" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+        <!-- ETS Computer Facilities -->
+        <div class="experienceTile experienceTile-ets">
+          <div class="experienceTile_info">
+            <div class="experienceTile_name">
+              ETS
+            </div>
+            <div class="experienceTile_position">
+              Web Designer & Developer
+            </div>
+            <a href="https://ets-computing.berkeley.edu" class="button">
+              View site
+            </a>
+          </div>
+          <div class="experienceTile_logo">
+            <img src="./dist/images/ets.png" class="experienceTile_logoImage">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container flex_item-bottomAlign">
+      <div class="footer flex flex-spreadApart flex-mobileStack flex-mobileCentered">
+
+        <ul class="footer_links">
+          <li class="footer_linkItem">
+            <a class="footer_link" href="https://github.com/winstonkim">
+              <i class="fa fa-github footer_linkIcon"></i>
+            </a>
+          </li>
+          <li class="footer_linkItem">
+            <a class="footer_link" href="https://linkedin.com/in/winstonkim">
+            <i class="fa fa-linkedin footer_linkIcon"></i>
+            </a>
+          </li>
+          <li class="footer_linkItem">
+            <a class="footer_link" href="https://flickr.com/winston-kim">
+              <i class="fa fa-flickr footer_linkIcon"></i>
+            </a>
+          </li>
+          <li class="footer_linkItem">
+            <a class="footer_link footer_link-email footer_text" href="mailto:winstonkim@berkeley.edu">winstonkim@berkeley.edu</a>
+          </li>
+        </ul>
+
+        <div class="footer_text">
+          &copy; Winston Kim 2017.
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!--
     <div class="experience experience-guidebook">
       <div class="experience_left">
         <div class="experience_image">
@@ -91,7 +243,7 @@
         <a target="_blank" href="https://rescomp.berkeley.edu/about/jobs/" class="experience_action">View site</a>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </body>
 <!-- JAVASCRIPT -->

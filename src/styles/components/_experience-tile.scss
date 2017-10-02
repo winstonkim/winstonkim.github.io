@@ -1,0 +1,88 @@
+.experienceTile {
+
+  $experience-colors:
+    'guidebook' #439fd8,
+    'graceapps' salmon,
+    'elo' #00bfd4,
+    'calcentral' #002e5b,
+    'rescomp' #212121,
+    'koinrides' #333e5e,
+    'ets' #002e5b
+  ;
+
+  width: 25%;
+  height: 200px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: $spacing;
+  overflow: hidden;
+  position: relative;
+  transition: all $transition-time $transition-property;
+
+  @media (max-width: 800px) {
+    width: 50%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  @each $color in $experience-colors {
+
+    &.experienceTile-#{nth($color, 1)} {
+      background: linear-gradient(lighten(nth($color, 2), 15%), nth($color, 2));
+
+      .experienceTile_info {
+        background: linear-gradient(transparentize(nth($color, 2), 0.15), transparentize(darken(nth($color, 2), 15%), 0.15));
+      }
+    }
+  }
+
+
+  .experienceTile_info {
+    position: absolute;
+    opacity: 0;
+    transition: all $transition-time $transition-property;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: $spacing;
+  }
+
+  .experienceTile_logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing * 1.5;
+  }
+
+  .experienceTile_logoImage {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &:hover {
+
+    .experienceTile_info {
+      opacity: 1;
+    }
+  }
+
+  .experienceTile_name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .experienceTile_position {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,306 @@
+* {
+  font-family: Raleway;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+$margin: 30px;
+$primary-color: #175676;
+$primary-text-color: white;
+$secondary-color: #4BA3C3;
+$tertiary-color: #CCE6F4;
+$link-color: #E57480;
+
+$guidebook-blue: #439fd8;
+// $calcentral-blue: #002e5b;
+$calcentral-blue: #f1a91e;
+$rescomp-color: #2F859D;
+
+$border-radius: 5px;
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: $margin;
+}
+
+.about {
+  background: linear-gradient($primary-color 50%, $secondary-color 150%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .about_container {
+
+    .about_title {
+      color: white;
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .about_description {
+      color: $tertiary-color;
+      font-size: 20px;
+    }
+
+    .about_contact {
+      display: flex;
+      list-style-type: none;
+      margin-top: $margin;
+
+      .about_contactItem {
+        margin-right: $margin / 3;
+        position: relative;
+
+        a {
+          color: $link-color;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 2px;
+          font-size: 12px;
+          font-weight: 600;
+          transition: color .25s;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background-color: $tertiary-color;
+          transition: width .25s;
+        }
+
+        &:hover {
+
+          a {
+            color: lighten($link-color, 5%);
+          }
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .about_experienceLink {
+      color: $primary-text-color;
+      text-decoration: none;
+      font-size: 11px;
+      margin-top: $margin * 2;
+      display: inline-block;
+    }
+  }
+}
+
+.experience {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &.experience-guidebook {
+    background: linear-gradient(lighten($guidebook-blue, 15), $guidebook-blue);
+
+    .experience_action {
+
+      &:hover {
+        border-color: darken($guidebook-blue, 10%);
+        background-color: $guidebook-blue;
+      }
+
+      &:active {
+        border-color: darken($guidebook-blue, 20%);
+        background-color: darken($guidebook-blue, 10%);
+      }
+    }
+
+    .experience_title {
+      color: darken($guidebook-blue, 25%);
+    }
+  }
+
+  &.experience-calcentral {
+    background: linear-gradient(lighten($calcentral-blue, 15), $calcentral-blue);
+
+    .experience_action {
+
+      &:hover {
+        border-color: darken($calcentral-blue, 10%);
+        background-color: $calcentral-blue;
+      }
+
+      &:active {
+        border-color: darken($calcentral-blue, 20%);
+        background-color: darken($calcentral-blue, 10%);
+      }
+    }
+
+    .experience_title {
+      color: darken($calcentral-blue, 20%);
+    }
+  }
+
+  &.experience-rescomp {
+    background: linear-gradient(lighten($rescomp-color, 15), $rescomp-color);
+
+    .experience_action {
+
+      &:hover {
+        border-color: darken($rescomp-color, 10%);
+        background-color: $rescomp-color;
+      }
+
+      &:active {
+        border-color: darken($rescomp-color, 20%);
+        background-color: darken($rescomp-color, 10%);
+      }
+    }
+
+    .experience_title {
+      color: darken($rescomp-color, 15%);
+    }
+
+    .experience_image {
+      height: 100%;
+      width: auto;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  .experience_left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $margin * 2;
+  }
+
+  .experience_image {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 1px 10px 20px rgba(0,0,0,.2);
+
+    img {
+      width: inherit;
+      border-radius: $border-radius;
+    }
+  }
+
+  .experience_right {
+    color: white;
+    width: 500px;
+    padding: $margin $margin * 2;
+  }
+
+  .experience_title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .experience_position {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: $margin / 2;
+  }
+
+  .experience_description {
+    font-size: 14px;
+  }
+
+  .experience_action {
+    text-decoration: none;
+    margin-top: $margin;
+    display: inline-block;
+    padding: $margin / 4 $margin / 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: all .25s;
+    border: solid 1px white;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.15);
+    border-radius: $border-radius;
+
+    &:hover {
+      color: white;
+      box-shadow: none;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+
+  .about {
+    height: initial;
+
+    .about_container {
+      padding: $margin * 4 0;
+      text-align: center;
+
+      .about_title {
+        font-size: 40px;
+      }
+
+      .about_description {
+        font-size: 15px;
+      }
+
+      .about_contact {
+        justify-content: center;
+
+        .about_contactItem {
+
+          a {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .experience {
+    flex-direction: column;
+    height: initial;
+
+    .experience_title {
+      font-size: 30px;
+    }
+
+    .experience_left {
+      height: initial;
+      width: auto;
+      padding: $margin * 2 $margin $margin;
+    }
+
+    .experience_right {
+      padding: 0 $margin $margin * 2;
+      width: 100%;
+    }
+
+    &.experience-rescomp {
+
+      .experience_image {
+        height: initial;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
