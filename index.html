@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alata|Quicksand&display=swap" rel="stylesheet">
   <title>Winston Kim</title>
 </head>
 
 <main>
-  <div class="left">
-    <img src="succulent.svg" class="succulent">
-  </div>
-  <div class="right">
-    <h1>Winston Kim</h1>
-    <p>Hi, I'm Winston. I'm currently a front-end software engineer at <a href="https://allbirds.com">Allbirds</a> and also a self-taught designer. I also like <a href="https://flickr.com/winston-kim">taking pictures</a> in my free time.</p>
+  <div class="about-me">
+    <img src="./assets/winston.jpg" height="100" width="100" class="my-photo">
+    <h1>Hey there, I'm Winston.</h1>
+    <p>I'm a Bay Area native and Cal alum currently residing in Pittsburgh, PA working as a UI Engineer at <a href="https://www.ae.com/" target="_blank">American Eagle</a>.</p>
+    <p>Outside of work, I mentor college students for <a href="https://www.instagram.com/pittmakenew/" target="_blank">MakeNew</a>, a Christian fellowship at Pitt. I also take <a href="https://flickr.com/winston-kim" target="_blank">photos</a> ocassionally, enjoy cooking easy recipes, and like to sing along with my mediocre guitar playing.</p>
     <div class="social">
       <ul>
         <li>
-          <a href="https://dribbble.com/winstonkim">Dribbble</a>
+          <a href="https://flickr.com/winston-kim" target="_blank">Flickr</a>
         </li>
         <li>
-          <a href="https://flickr.com/winston-kim">Flickr</a>
+          <a href="https://github.com/winstonkim" target="_blank">Github</a>
         </li>
         <li>
-          <a href="https://github.com/winstonkim">Github</a>
+          <a href="https://instagram.com/winstonkim" target="_blank">Instagram</a>
         </li>
         <li>
-          <a href="https://linkedin.com/in/winstonkim">LinkedIn</a>
+          <a href="https://linkedin.com/in/winstonkim" target="_blank">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -36,117 +35,117 @@
 <style>
   * {
     font-family: 'Quicksand', sans-serif;
-    letter-spacing: 0.75px;
-    line-height: 1.4;
-    margin: 0;
-    padding: 0;
-    color: #111;
+    letter-spacing: 0.25px;
+    color: #555555;
     box-sizing: border-box;
-    transition: all 0.5s;
   }
 
-  a {
-    color: #bbb;
-    text-decoration: none;
-    display: inline-block;
-    transition: all .25s;
+  html {
+    height: 100%;
   }
 
-  a:hover {
-    color: #666;
+  body {
+    padding: 0;
+    margin: 0;
+    background: #828E82;
+    background: linear-gradient(180deg, rgba(96,123,125,1) 0%, rgba(170,174,142,1) 100%);
   }
 
   main {
+    background-color: white;
     height: 100vh;
-    padding: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    position: fixed;
+    right: 0;
+
+  }
+
+  @media screen and (max-width: 720px) {
+    main {
+      width: 95%;
+      height: 100%;
+    }
   }
 
   h1 {
-    color: #93B8B8;
-    font-size: 64px;
-    letter-spacing: 1.5px;
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 0;
+    color: #AAAE8E;
   }
 
   p {
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+
   }
 
-  .left {
-    
+  .my-photo {
+    border-radius: 100%;
   }
 
-  .right {
-    max-width: 600px;
+  .about-me {
+    max-width: 560px;
+    height: 100%;
+    padding: 48px;
+    overflow: auto;
   }
 
-  .succulent {
-    width: 140px;
-    margin-right: 50px;
+  @media screen and (max-width: 720px) {
+    .about-me {
+      padding: 24px;
+    }
+  }
+
+  .about-me a {
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+    display: inline-block;
+    background-color: rgba(170,174,142, 0.3);
+    padding: 0 3px;
+    margin: 0 1px;
+  }
+
+  .about-me a:hover {
+    transform: translateY(-3px);
+  }
+
+  .about-me a::after {
+    content: '';
+    opacity: 0;
+    will-change: opacity;
+    transition: all 0.2s;
+  }
+
+  .about-me a:hover::after {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #AAAE8E;
+    opacity: 1;
   }
 
   .social {
-    font-size: 18px;
-    margin-top: 30px;
+    margin-top: 24px;
+    padding-bottom: 36px;
   }
 
   .social ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .social ul li {
-    margin-right: 15px;
-    position: relative;
+    margin-right: 9px;
+    margin-top: 12px;
   }
 
-  .social ul li::after {
-    content: '';
-    background-color: #BDD6D5;
-    height: 3px;
-    bottom: -2px;
-    display: block;
-    position: absolute;
-    width: 100%;
-    transform: scaleY(1);
-    transition: all .25s;
-  }
-
-  .social ul li:hover::after {
-    transform: scaleY(1.75);
-  }
-
-  .me {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-  }
-
-  @media screen and (max-width: 720px) {
-
-    h1 {
-      font-size: 48px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-
-    main {
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .succulent {
-      margin-right: 0;
-      width: 80px;
-    }
-
-    .social ul {
-      justify-content: center;
-      margin-top: 20px;
-    }
+  .social ul li:last-child {
+    margin-right: 0;
   }
 </style>

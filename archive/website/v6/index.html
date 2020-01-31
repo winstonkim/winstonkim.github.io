@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand:300,400,500,700" rel="stylesheet">
+  <title>Winston Kim</title>
+</head>
+
+<main>
+  <div class="left">
+    <img src="succulent.svg" class="succulent">
+  </div>
+  <div class="right">
+    <h1>Winston Kim</h1>
+    <p>Hi, I'm Winston. I'm currently a front-end software engineer at <a href="https://allbirds.com">Allbirds</a> and also a self-taught designer. I also like <a href="https://flickr.com/winston-kim">taking pictures</a> in my free time.</p>
+    <div class="social">
+      <ul>
+        <li>
+          <a href="https://dribbble.com/winstonkim">Dribbble</a>
+        </li>
+        <li>
+          <a href="https://flickr.com/winston-kim">Flickr</a>
+        </li>
+        <li>
+          <a href="https://github.com/winstonkim">Github</a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/winstonkim">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<style>
+  * {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0.75px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    box-sizing: border-box;
+    transition: all 0.5s;
+  }
+
+  a {
+    color: #bbb;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .25s;
+  }
+
+  a:hover {
+    color: #666;
+  }
+
+  main {
+    height: 100vh;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    color: #93B8B8;
+    font-size: 64px;
+    letter-spacing: 1.5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .left {
+    
+  }
+
+  .right {
+    max-width: 600px;
+  }
+
+  .succulent {
+    width: 140px;
+    margin-right: 50px;
+  }
+
+  .social {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .social ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .social ul li {
+    margin-right: 15px;
+    position: relative;
+  }
+
+  .social ul li::after {
+    content: '';
+    background-color: #BDD6D5;
+    height: 3px;
+    bottom: -2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform: scaleY(1);
+    transition: all .25s;
+  }
+
+  .social ul li:hover::after {
+    transform: scaleY(1.75);
+  }
+
+  .me {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 720px) {
+
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+
+    main {
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .succulent {
+      margin-right: 0;
+      width: 80px;
+    }
+
+    .social ul {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+</style>
