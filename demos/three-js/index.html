@@ -28,8 +28,8 @@
          camera.position.x = -30;
          camera.position.y = 0;
          camera.position.z = 60;
-         var renderer = new THREE.WebGLRenderer({ antialias: true });
-         renderer.setClearColor("#e5e5e5");
+         var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+         renderer.setClearColor(0x070608, 1);
          renderer.setSize(window.innerWidth, window.innerHeight);
 
          document.body.appendChild(renderer.domElement);
@@ -44,23 +44,24 @@
          var raycaster = new THREE.Raycaster();
          var mouse = new THREE.Vector2();
 
-        var directionalLight = new THREE.DirectionalLight( 0xeeeeee, 1 );
-		directionalLight.position.set( -10, 10, -8 );
-		scene.add( directionalLight );
+        // var directionalLight = new THREE.DirectionalLight( 0xFFFFFF, 50 );
+		// directionalLight.position.set( 0, 0, 0 );
+		// scene.add( directionalLight );
 
-         var light = new THREE.PointLight(0xFFFFFF, 1, 1000);
-         light.position.set(0, 0, 0);
-        //  scene.add(light);
-
-         var light = new THREE.PointLight(0xFFFFFF, 0.25, 1000);
-         light.position.set(0, 0, 25);
+         var light = new THREE.DirectionalLight(0xE99C4D, 10, 1000);
+         light.position.set(100, 100, 100);
+         light.castShadow = true;
          scene.add(light);
+
+        //  var light = new THREE.PointLight(0xFFFFFF, 0.25, 1000);
+        //  light.position.set(0, 0, 25);
+        //  scene.add(light);
 
         var loader = new THREE.GLTFLoader();
         loader.load('models/glb/well.glb', function (gltf) {
-            // gltf.scene.rotation.x += .2;
+            console.log(gltf);
             gltf.scene.rotation.y += 4.5;
-            gltf.scene.position.y -= 4.5;
+            gltf.scene.position.y -= 10.5;
             scene.add( gltf.scene );
         }, undefined, function (error) {
             console.error(error);
@@ -68,6 +69,7 @@
 
          var render = function() {
              requestAnimationFrame(render);
+             renderer.toneMappingExposure = 0.01;
              renderer.render(scene, camera);
          }
 
@@ -75,6 +77,8 @@
 
          function updateCamera(ev) {
             camera.position.set(-30 + (window.scrollY / document.body.offsetHeight) * 30.0, 0, 60 - (window.scrollY / document.body.offsetHeight) * 30.0);
+            light.intensity = 10 + 200 * (window.scrollY / document.body.offsetHeight);
+            renderer.setClearColor(0x070608, (1 -(window.scrollY / document.body.offsetHeight)));
         }
 
         window.addEventListener("scroll", updateCamera);

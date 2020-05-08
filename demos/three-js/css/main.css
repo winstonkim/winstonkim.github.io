@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    height: 500vh;
 }
 
 canvas {
@@ -7,11 +8,17 @@ canvas {
     position: fixed;
     top: 0;
     z-index: -1;
+    background-color: #E99C4D;
 }
 div {
     height: 100vh;
     display: flex;
     align-items: center;
     font-size: 50px;
-    margin-left: 100px;
+    margin-left: 30px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
